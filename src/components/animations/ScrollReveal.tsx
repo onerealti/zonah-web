@@ -43,7 +43,7 @@ export default function ScrollReveal({
             transition: {
                 duration: duration,
                 delay: delay,
-                ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number], // matches original Prestige snap ease
+                ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number], // matches original snap ease
             }
         };
 

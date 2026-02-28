@@ -56,7 +56,7 @@ const BoardOfDirectors = () => {
                                 <div className="theme-block">
                                     <div className="theme-block-img theme-block-img-with-link">
                                         <picture>
-                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Irfan+Razack" alt="Irfan Razack" width="350" height="350" />
+                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Aman+Verma" alt="Aman Verma" width="350" height="350" />
                                         </picture>
                                         <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@ const BoardOfDirectors = () => {
                                         </a>
                                     </div>
                                     <div className="theme-block-title">
-                                        <h4 className="is-capitalized">Irfan Razack</h4>
+                                        <h4 className="is-capitalized">Aman Verma</h4>
                                         <span className="is-capitalized">Chairman and Managing Director</span>
                                         <a href="#" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>
@@ -77,7 +77,7 @@ const BoardOfDirectors = () => {
                                 <div className="theme-block">
                                     <div className="theme-block-img theme-block-img-with-link">
                                         <picture>
-                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Rezwan+Razack" alt="Rezwan Razack" width="350" height="350" />
+                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Siddharth+Mehta" alt="Siddharth Mehta" width="350" height="350" />
                                         </picture>
                                         <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,8 +88,8 @@ const BoardOfDirectors = () => {
                                         </a>
                                     </div>
                                     <div className="theme-block-title">
-                                        <h4 className="is-capitalized">Rezwan Razack</h4>
-                                        <span className="is-capitalized">Joint Managing Director</span>
+                                        <h4 className="is-capitalized">Siddharth Mehta</h4>
+                                        <div className="theme-block-subtitle">Joint Managing Director</div>
                                         <a href="#" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@ const BoardOfDirectors = () => {
                                 <div className="theme-block">
                                     <div className="theme-block-img theme-block-img-with-link">
                                         <picture>
-                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Noaman+Razack" alt="Noaman Razack" width="350" height="350" />
+                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Vikram+Singh" alt="Vikram Singh" width="350" height="350" />
                                         </picture>
                                         <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +109,7 @@ const BoardOfDirectors = () => {
                                         </a>
                                     </div>
                                     <div className="theme-block-title">
-                                        <h4 className="is-capitalized">Noaman Razack</h4>
+                                        <h4 className="is-capitalized">Vikram Singh</h4>
                                         <span className="is-capitalized">Director</span>
                                         <a href="#" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>
@@ -119,7 +119,7 @@ const BoardOfDirectors = () => {
                                 <div className="theme-block">
                                     <div className="theme-block-img theme-block-img-with-link">
                                         <picture>
-                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Tariq+Razack" alt="Tariq Razack" width="350" height="350" />
+                                            <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Sameer+Khanna" alt="Sameer Khanna" width="350" height="350" />
                                         </picture>
                                         <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +130,7 @@ const BoardOfDirectors = () => {
                                         </a>
                                     </div>
                                     <div className="theme-block-title">
-                                        <h4 className="is-capitalized">Tariq Razack</h4>
+                                        <h4 className="is-capitalized">Sameer Khanna</h4>
                                         <span className="is-capitalized">Director</span>
                                         <a href="#" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>

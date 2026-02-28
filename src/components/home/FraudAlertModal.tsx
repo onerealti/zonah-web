@@ -31,7 +31,7 @@ const FraudAlertModal = () => {
                     </h3>
                 </div>
                 <div className="theme-modal-card-body">
-                    <p>It has come to our attention that fraudsters are misusing the name of Prestige Group to promote fake investment schemes, falsely promising high returns in properties. We urge everyone to be cautious and avoid falling prey to such scams.</p>
+                    <p>It has come to our attention that fraudsters are misusing the name of Zonah Developers to promote fake investment schemes, falsely promising high returns in properties. We urge everyone to be cautious and avoid falling prey to such scams.</p>
                     <p>Please note that we have already reported these fraudulent activities to the authorities and are taking steps to address the situation.</p>
                     <p>For authentic information about our projects, always visit our official website: <b><a href="/">www.zonahdevelopers.com</a></b></p>
                     <p>Stay vigilant, and thank you for your continued trust.</p>
