@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url=javascript:history.go(-1)">
+    <title>404 Page</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        #after-call-rating-sidebar,
+        #my-profile-sidebar,
+        #toast-message {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .bg-page-not-found {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .section-page-not-found {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .page-not-found-detail {
+            position: absolute;
+            top: calc(50% + 60px);
+            left: 0;
+            right: 0;
+            text-align: center;
+            max-width: 480px;
+            margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .button {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            background-color: #a88944;
+            border-color: #a88944;
+            height: 40px;
+            display: inline-block;
+            line-height: 40px;
+            padding: 0 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s linear;
+        }
+
+        .button:hover {
+            background-color: #9d803e;
+            border-color: #9d803e;
+        }
+
+        .page-not-found-detail h1 {
+            color: #a88944;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0 0 24px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-page-not-found">
+        <img class="bg-page-not-found" src="https://www.prestigeconstructions.com/resources/assets/images/404.svg" id="setimgurl" alt="404 Image">
+        <div class="page-not-found-detail">
+            <h1>No Data Found</h1>
+            <a class="button" id="homepagebtn" href="https://www.prestigeconstructions.com/">Go to Home Page</a>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+        setTimeout(function() {
+            // Ensure history.go(-1) is only executed if there is a previous page
+            if (window.history.length > 1) {
+                window.history.go(-1);
+            } else {
+                // If there is no previous page, redirect to the home page or a default page
+                window.location.href = '/';
+            }
+        }, 1000);
+    </script>
+</html>

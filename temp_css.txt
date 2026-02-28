@@ -1,0 +1,23 @@
+@keyframes fade-in-left {0% {opacity: 0;transform: translateX(-30px);-webkit-transform: translateX(-30px);-moz-transform: translateX(-30px);-ms-transform: translateX(-30px);-o-transform: translateX(-30px);}100% {opacity: 1;transform: translateX(0);-moz-transform: translateX(0);-ms-transform: translateX(0);-o-transform: translateX(0);-webkit-transform: translateX(0);}}
+
+@keyframes fade-in-right {0% {opacity: 0;transform: translateX(30px);-webkit-transform: translateX(30px);-moz-transform: translateX(30px);-ms-transform: translateX(30px);-o-transform: translateX(30px);}100% {-webkit-transform: translateX(0);transform: translateX(0);opacity: 1;}}
+
+@keyframes fade-in-bottom {0% {opacity: 0;transform: translateY(30px);-webkit-transform: translateY(30px);-moz-transform: translateY(30px);-ms-transform: translateY(30px);-o-transform: translateY(30px);}100% {-webkit-transform: translateY(0);transform: translateY(0);opacity: 1;}}
+
+@keyframes fade-in-top {0% {opacity: 0;transform: translateY(-30px);-webkit-transform: translateY(-30px);-moz-transform: translateY(-30px);-ms-transform: translateY(-30px);-o-transform: translateY(-30px);}100% {-webkit-transform: translateY(0);transform: translateY(0);opacity: 1;}}
+
+.fade-in-top {animation: fade-in-top 1s ease-in-out both;-webkit-animation: fade-in-top 1s ease-in-out both;}
+.fade-in-bottom {animation: fade-in-bottom 1s ease-in-out both;-webkit-animation: fade-in-bottom 1s ease-in-out both;}
+.fade-in-left {animation: fade-in-left 1s ease-in-out both;-webkit-animation: fade-in-left 1s ease-in-out both;}
+.fade-in-right {animation: fade-in-right 1s ease-in-out both;-webkit-animation: fade-in-right 1s ease-in-out both;}
+
+.js-scroll {opacity: 0;
+
+.scrolled.fade-in {animation: fade-in 1s ease-in-out both;-webkit-animation: fade-in 1s ease-in-out both;
+.scrolled.fade-in-top {animation: fade-in-top 1s ease-in-out both;-webkit-animation: fade-in-top 1s ease-in-out both;
+.scrolled.fade-in-bottom {animation: fade-in-bottom 1s ease-in-out both;-webkit-animation: fade-in-bottom 1s ease-in-out both;
+.scrolled.fade-in-left {animation: fade-in-left 1s ease-in-out both;-webkit-animation: fade-in-left 1s ease-in-out both;
+.scrolled.fade-in-right {animation: fade-in-right 1s ease-in-out both;-webkit-animation: fade-in-right 1s ease-in-out both;
+.scrolled {opacity: 1;-webkit-transform: translateZ(0) scale(1);transform: translateZ(0) scale(1);
+.scrolled {opacity: 1;-webkit-transform: none;transform: none;
+.scrolled {opacity: 1;-webkit-transform: none;transform: none;

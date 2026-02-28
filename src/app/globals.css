@@ -1,0 +1,256 @@
+@theme {
+    --font-sans: "Jost", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@import "tailwindcss/utilities";
+
+
+
+/* Project Configurations - 2x2 grid layout */
+.project-configurations {
+    position: relative;
+    border-top: 1px solid rgb(222, 222, 222);
+    border-bottom: 1px solid rgb(222, 222, 222);
+    padding: 16px 0;
+    margin: 16px 0;
+}
+
+.project-configurations ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px -12px;
+    list-style: none;
+    padding: 0;
+}
+
+.project-configurations ul li {
+    width: 50%;
+    flex: 0 0 50%;
+    padding: 0 8px;
+    margin-bottom: 12px;
+}
+
+.project-configurations-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-configurations-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.project-configurations-desc h4 {
+    font-size: 11px;
+    color: #999;
+    margin: 0 0 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-configurations-desc span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Project price and contact row */
+.project-price-and-contact ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-price-and-contact-item.project-price {
+    flex: 1;
+}
+
+.project-price-and-contact-item.project-price .theme-btn.full-width {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ─── About Us: Counter Stats ─── */
+.counter-item {
+    margin-bottom: 24px;
+}
+
+.counter-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.counter-item p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.about-us-counter-cols .counter-item h3 {
+    color: var(--color-primary, #9a7845);
+}
+
+/* ─── Operational Segments: projects-location-detail ─── */
+.projects-location-detail {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.projects-location-detail li {
+    margin-bottom: 0;
+}
+
+.projects-location-items-index {
+    padding: 20px 0 0 0;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* The actual source has 40px top padding but it's too much here, 20px is closer to the visual */
+
+.projects-location-items-index h4 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #303030;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.projects-location-items-index span {
+    font-size: 13px;
+    color: #303030;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.projects-location-items-index.active h4,
+.projects-location-items-index:hover h4 {
+    color: var(--color-primary, #9a7845);
+    font-weight: 400;
+}
+
+.projects-location-view-all {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-primary, #9a7845);
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding-bottom: 15px;
+}
+
+.projects-location-items-index.active .projects-location-view-all,
+.projects-location-items-index:hover .projects-location-view-all {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ─── Price Range Slider ─── */
+.price-range-labels {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.price-range-labels li label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+.price-slider-track-wrapper {
+    position: relative;
+    height: 20px;
+}
+
+.price-slider-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+
+.price-slider-range {
+    position: absolute;
+    height: 100%;
+    background: var(--color-primary, #9a7845);
+    border-radius: 2px;
+}
+
+.price-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    pointer-events: none;
+    outline: none;
+}
+
+.price-thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary, #9a7845);
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.price-thumb::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary, #9a7845);
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .section-banner {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .section-banner img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Scroll animations are now handled by ScrollReveal.tsx (Framer Motion) */

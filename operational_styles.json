@@ -1,0 +1,25 @@
+{
+  "itemClass": "projects-location-items-index active cursor-pointer click_projects",
+  "itemHtml": "<div class=\"projects-location-items-index active cursor-pointer click_projects\" data-type=\"Residential\" data-citycode=\"Bangalore\">\n                                                        <h4>Bangalore</h4>\n                                                        <span>19 Projects Available</span>\n                                                        <a class=\"projects-location-view-all view_projects call_project\" data-type=\"Residential\" data-citycode=\"Bangalore\" href=\"javascriptvoid:(0);\">View All\n                                                        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-up-right\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" stroke-width=\"1.25\" stroke=\"currentColor\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                                                            <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n                                                            <path d=\"M17 7l-10 10\"></path>\n                                                            <path d=\"M8 7l9 0l0 9\"></path>\n                                                        </svg>\n                                                        </a>\n                                                    </div>",
+  "itemStyles": {
+    "padding": "40px 0px 0px",
+    "borderBottom": "0px none rgb(48, 48, 48)",
+    "display": "block",
+    "flexDirection": "row"
+  },
+  "h4Styles": {
+    "fontSize": "24px",
+    "fontWeight": "400",
+    "color": "rgb(133, 109, 71)",
+    "marginBottom": "5px"
+  },
+  "spanStyles": {
+    "fontSize": "13px",
+    "color": "rgb(48, 48, 48)"
+  },
+  "linkStyles": {
+    "display": "flex",
+    "position": "static",
+    "right": "auto"
+  }
+}

@@ -1,0 +1,40 @@
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./src/app/layout.tsx:5:1
+Module not found: Can't resolve '../public/resources/media/css/inc-css-all812b.css'
+  3 | import "./globals.css";
+  4 | // Global styles from Prestige Construct
+> 5 | import "../public/resources/media/css/inc-css-all812b.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import "../public/resources/media/css/inc-custom812b.css";
+  7 |
+  8 | import Header from "@/components/layout/Header";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/layout.tsx:6:1
+Module not found: Can't resolve '../public/resources/media/css/inc-custom812b.css'
+  4 | // Global styles from Prestige Construct
+  5 | import "../public/resources/media/css/inc-css-all812b.css";
+> 6 | import "../public/resources/media/css/inc-custom812b.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | import Header from "@/components/layout/Header";
+  9 | import Footer from "@/components/layout/Footer";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/layout.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/layout.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
