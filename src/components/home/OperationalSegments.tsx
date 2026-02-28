@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-type SegmentTab = 'residential' | 'commercial' | 'hospitality' | 'retail';
+type SegmentTab = 'residential' | 'commercial';
 
 type LocationItem = {
     location: string;
@@ -30,25 +30,11 @@ const segmentData: SegmentData = {
         { location: 'Chennai', count: 6 },
         { location: 'Mumbai', count: 5 },
     ],
-    hospitality: [
-        { location: 'Bangalore', count: 12 },
-        { location: 'Hyderabad', count: 4 },
-        { location: 'Chennai', count: 3 },
-        { location: 'Kochi', count: 2 },
-    ],
-    retail: [
-        { location: 'Bangalore', count: 18 },
-        { location: 'Hyderabad', count: 5 },
-        { location: 'Chennai', count: 4 },
-        { location: 'Mumbai', count: 3 },
-    ],
 };
 
 const tabs: { key: SegmentTab; label: string }[] = [
     { key: 'residential', label: 'Residential' },
     { key: 'commercial', label: 'Commercial' },
-    { key: 'hospitality', label: 'Hospitality' },
-    { key: 'retail', label: 'Retail' },
 ];
 
 const OperationalSegments = () => {

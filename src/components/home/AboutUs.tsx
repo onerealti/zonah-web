@@ -23,7 +23,7 @@ const AboutUs = () => {
                                 Over the last decade, Zonah Developers has firmly established itself as one of the leading and most successful developers of real estate in India by imprinting its indelible mark across all asset classes.
                             </p>
                             <p className="mb-4">
-                                With a portfolio spanning residential, commercial, hospitality, and retail segments, Zonah has delivered landmark developments that redefine skylines across major Indian cities — from Bangalore and Hyderabad to Chennai and Mumbai.
+                                With a portfolio spanning residential and commercial segments, Zonah has delivered landmark developments that redefine skylines across major Indian cities — from Bangalore and Hyderabad to Chennai and Mumbai.
                             </p>
                             <a href="/about-us" className="theme-btn mt-4">Know More</a>
                         </ScrollReveal>

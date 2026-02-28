@@ -58,11 +58,6 @@ export default function Header() {
                                 <ul className="theme-menu is-hidden-mobile">
                                     <li><Link href="/about-us">About</Link></li>
                                     <li><Link href="/residential-projects">Residential</Link></li>
-                                    <li><Link href="/offices">Offices</Link></li>
-                                    <li><Link href="/rental-projects">Rentals</Link></li>
-                                    <li><Link href="/hospitality">Hospitality</Link></li>
-                                    <li><Link href="/retail-projects">Retail</Link></li>
-                                    <li><Link href="/nri-corner">NRI</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -119,89 +114,14 @@ export default function Header() {
                     <li className="header-menu-item is-hidden-tablet">
                         <Link className="header-menu-link" href="/residential-projects" onClick={() => setMenuOpen(false)}>Residential</Link>
                     </li>
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/offices" onClick={() => setMenuOpen(false)}>Offices</Link>
-                    </li>
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/rental-projects" onClick={() => setMenuOpen(false)}>Rentals</Link>
-                    </li>
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/hospitality" onClick={() => setMenuOpen(false)}>Hospitality</Link>
-                    </li>
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/retail-projects" onClick={() => setMenuOpen(false)}>Retail</Link>
-                    </li>
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/nri-corner" onClick={() => setMenuOpen(false)}>NRI</Link>
-                    </li>
                     <li className="header-menu-item">
                         <Link className="header-menu-link" href="/about-us" onClick={() => setMenuOpen(false)}>About</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/our-investors" onClick={() => setMenuOpen(false)}>Investors</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link bindnewsdynamicurl" href="/news" onClick={() => setMenuOpen(false)}>News Corner</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/events" onClick={() => setMenuOpen(false)}>Events</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/awards" onClick={() => setMenuOpen(false)}>Awards</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <a className="header-menu-link" href="#" rel="nofollow">
-                            <div className="know-more-btn">
-                                Falcon News
-                                <div className="know-more-btn-icon">
-                                    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/our-brands" onClick={() => setMenuOpen(false)}>Our Brands</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <a className="header-menu-link" href="#" rel="nofollow">
-                            <div className="know-more-btn">
-                                Careers
-                                <div className="know-more-btn-icon">
-                                    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
                     </li>
                     <li className="header-menu-item">
                         <Link className="header-menu-link" href="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
                     </li>
                     <li className="header-menu-item">
                         <Link className="header-menu-link" href="/contact-us" onClick={() => setMenuOpen(false)}>Contact</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <a className="header-menu-link" href="#" rel="nofollow">
-                            <div className="know-more-btn">
-                                Customer Portal
-                                <div className="know-more-btn-icon">
-                                    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
                     </li>
                 </ul>
                 <div className="social-icons-detail">

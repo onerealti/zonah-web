@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-type SegmentTab = 'residential' | 'commercial' | 'hospitality' | 'retail';
+type SegmentTab = 'residential' | 'commercial';
 
 type LocationItem = {
     location: string;
@@ -27,25 +27,11 @@ const segmentData: Record<SegmentTab, LocationItem[]> = {
         { location: 'Chennai', count: 6, href: '/commercial-projects?city=chennai' },
         { location: 'Mumbai', count: 5, href: '/commercial-projects?city=mumbai' },
     ],
-    hospitality: [
-        { location: 'Bengaluru', count: 12, href: '/hospitality-projects?city=bengaluru' },
-        { location: 'Hyderabad', count: 4, href: '/hospitality-projects?city=hyderabad' },
-        { location: 'Chennai', count: 3, href: '/hospitality-projects?city=chennai' },
-        { location: 'Kochi', count: 2, href: '/hospitality-projects?city=kochi' },
-    ],
-    retail: [
-        { location: 'Bengaluru', count: 18, href: '/retail-projects?city=bengaluru' },
-        { location: 'Hyderabad', count: 5, href: '/retail-projects?city=hyderabad' },
-        { location: 'Chennai', count: 4, href: '/retail-projects?city=chennai' },
-        { location: 'Mumbai', count: 3, href: '/retail-projects?city=mumbai' },
-    ],
 };
 
 const tabs: { key: SegmentTab; label: string }[] = [
     { key: 'residential', label: 'Residential' },
     { key: 'commercial', label: 'Commercial' },
-    { key: 'hospitality', label: 'Hospitality' },
-    { key: 'retail', label: 'Retail' },
 ];
 
 const OurProjects = () => {
@@ -88,13 +74,13 @@ const OurProjects = () => {
                                     {tabs.map((tab) => (
                                         <div
                                             key={tab.key}
-                                            className={`content-tab ${tab.key === 'residential' ? 'residential_count_bind' : ''} ${tab.key === 'commercial' ? 'commercial_count_bind' : ''} ${tab.key === 'hospitality' ? 'hospitality_count_bind' : ''} ${tab.key === 'retail' ? 'retail_count_bind' : ''}`}
+                                            className={`content-tab ${tab.key === 'residential' ? 'residential_count_bind' : ''} ${tab.key === 'commercial' ? 'commercial_count_bind' : ''}`}
                                             id={`projects-${tab.key}`}
                                             style={{ display: activeTab === tab.key ? 'block' : 'none' }}
                                         >
                                             <ul className="projects-location-detail">
                                                 {segmentData[tab.key].map((item, idx) => {
-                                                    const viewAllLink = tab.key !== 'hospitality' && tab.key !== 'retail' ? (
+                                                    const viewAllLink = (
                                                         <a className="projects-location-view-all view_projects call_project" data-type={tab.label} data-citycode={item.location.toLowerCase()} href={item.href}>
                                                             View All
                                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-up-right" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.25" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -103,7 +89,7 @@ const OurProjects = () => {
                                                                 <path d="M8 7l9 0l0 9"></path>
                                                             </svg>
                                                         </a>
-                                                    ) : null;
+                                                    );
 
                                                     const isActive = activeTab === tab.key && activeLocation === item.location;
 

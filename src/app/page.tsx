@@ -5,7 +5,6 @@ import AboutUs from "@/components/home/AboutUs";
 import OurProjects from "@/components/home/OurProjects";
 import BoardOfDirectors from "@/components/home/BoardOfDirectors";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
-import OurBrands from "@/components/home/OurBrands";
 import RecentViewedProjects from "@/components/home/RecentViewedProjects";
 import FraudAlertModal from "@/components/home/FraudAlertModal";
 
@@ -19,7 +18,6 @@ export default function Home() {
       <OurProjects />
       <BoardOfDirectors />
       <FeaturedProjects />
-      <OurBrands />
       <RecentViewedProjects />
     </main>
   );

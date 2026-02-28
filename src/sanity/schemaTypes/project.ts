@@ -41,8 +41,6 @@ export default defineType({
                 list: [
                     { title: 'Residential', value: 'residential' },
                     { title: 'Commercial', value: 'commercial' },
-                    { title: 'Retail', value: 'retail' },
-                    { title: 'Hospitality', value: 'hospitality' },
                 ]
             }
         }),

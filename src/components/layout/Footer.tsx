@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="footer-menu dark">
                     <div className="columns is-multiline is-mobile">
                         {/* Reach Us */}
-                        <div className="column is-6-mobile is-3-tablet is-3-desktop is-4-widescreen col-footer-menu">
+                        <div className="column is-6-mobile is-3-tablet is-4-desktop is-4-widescreen col-footer-menu">
                             <div className="footer-menu-detail footer-contact-detail">
                                 <h4>Reach Us</h4>
                                 <ul>
@@ -92,135 +92,25 @@ const Footer = () => {
                         </div>
 
                         {/* Quick Menu */}
-                        <div className="column is-6-mobile is-3-tablet is-3-desktop is-3-widescreen col-footer-menu">
+                        <div className="column is-6-mobile is-3-tablet is-3-desktop is-4-widescreen col-footer-menu">
                             <div className="footer-menu-detail">
                                 <h4>Quick Menu</h4>
                                 <ul>
                                     <li><Link href="/about-us">About Us</Link></li>
                                     <li><Link href="/residential-projects">Residential</Link></li>
-                                    <li><Link href="/offices">Offices</Link></li>
-                                    <li><Link href="/resale-projects">Resale</Link></li>
-                                    <li><Link href="/videos">Videos</Link></li>
-                                    <li><Link href="/events">Events</Link></li>
-                                    <li><Link href="/news" className="bindnewsdynamicurl">News Corner</Link></li>
-                                    <li><Link href="/blog">Blogs</Link></li>
                                     <li><Link href="/faq">FAQs</Link></li>
-                                    <li><Link href="/awards">Awards</Link></li>
-                                    <li>
-                                        <a href="https://jobs.prestigeconstructions.com/" target="_blank" rel="nofollow" title="Open Careers page in new tab">
-                                            <div className="know-more-btn mt-0">
-                                                Careers
-                                                <div className="know-more-btn-icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li><a href="https://prestigepartnercircle.com/cp-web" rel="nofollow">Become a Channel Partner</a></li>
-                                    <li>
-                                        <a href="https://prestigefalconnews.com/" target="_blank" rel="nofollow" title="Open prestigefalconnews.com in new tab">
-                                            <div className="know-more-btn mt-0">
-                                                Falcon News
-                                                <div className="know-more-btn-icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
 
                         {/* Quick Links */}
-                        <div className="column is-6-mobile is-3-tablet is-3-desktop is-3-widescreen col-footer-menu">
+                        <div className="column is-6-mobile is-3-tablet is-5-desktop is-4-widescreen col-footer-menu">
                             <div className="footer-menu-detail">
                                 <h4>Quick Links</h4>
                                 <ul>
-                                    <li>
-                                        <a href="/falcon-connect" target="_blank" title="Open Customer Portal in new tab">
-                                            <div className="know-more-btn mt-0">
-                                                Customer Portal
-                                                <div className="know-more-btn-icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li><Link href="/crisil-rating">Crisil Rating</Link></li>
-                                    <li><Link href="/prestige-connect">Referral</Link></li>
-                                    <li><Link href="/emi-calculator">EMI Calculator</Link></li>
-                                    <li>
-                                        <a href="https://morphdesigns.com/" target="_blank" rel="nofollow" title="Open morphdesigns.com in new tab">
-                                            <div className="know-more-btn mt-0">
-                                                Interior Design
-                                                <div className="know-more-btn-icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li><Link href="/nri-corner">NRIs</Link></li>
                                     <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                                     <li><Link href="/terms-and-conditions">Terms &amp; Conditions</Link></li>
                                     <li><Link href="/disclaimer">Disclaimer</Link></li>
-                                    <li><Link href="/public-notices">Public Notices</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        {/* Investors */}
-                        <div className="column is-6-mobile is-3-tablet is-3-desktop is-2-widescreen col-footer-menu">
-                            <div className="footer-menu-detail">
-                                <h4>Investors</h4>
-                                <ul>
-                                    <li><Link href="/our-investors">Investors</Link></li>
-                                    <li><Link href="/our-investors/investors-downloads/financial-performance">Financial Performance</Link></li>
-                                    <li><Link href="/our-investors/investors-downloads/share-holding-patterns">Share Holding Pattern</Link></li>
-                                    <li>
-                                        <a href="#" target="_blank" rel="nofollow" title="Open AGM Notice PDF in new tab">
-                                            <div className="know-more-btn mt-0">
-                                                AGM Notice
-                                                <div className="know-more-btn-icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" rel="nofollow" title="Open Annual Report PDF in new tab">
-                                            <div className="know-more-btn mt-0">
-                                                Annual Report
-                                                <div className="know-more-btn-icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.05078 5.05029L10.9503 5.05029" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M1.05036 14.9498L10.9499 5.05028" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                        <path d="M10.9497 14.9497L10.9497 5.05025" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li><Link href="/esg">ESG</Link></li>
                                 </ul>
                             </div>
                         </div>
