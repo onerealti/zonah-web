@@ -35,7 +35,7 @@ const PropertySearchBox = () => {
                                             <div className="columns is-multiline is-vcentered gap-1">
                                                 <div className="column is-12-mobile searchbind">
                                                     <div className="col-form">
-                                                        <a className="theme-btn line-btn black-btn full-width rounded-pill btn-with-arrow searchbinds" href="#">
+                                                        <a className="theme-btn line-btn black-btn full-width rounded-pill btn-with-arrow searchbinds" href="/search-results">
                                                             <span className="appendsearchcount">0</span> Projects Found
                                                             <svg fill="none" height="24" viewBox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M2 12H22" stroke="#303030" strokeLinecap="round" strokeLinejoin="round"></path>

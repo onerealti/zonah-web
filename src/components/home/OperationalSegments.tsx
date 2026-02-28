@@ -76,7 +76,7 @@ const OperationalSegments = () => {
                                             <ul className="projects-location-detail">
                                                 {segmentData[tab.key].map((item, idx) => (
                                                     <li key={idx}>
-                                                        <a href="#">
+                                                        <a href={`/${tab.key}-projects/${item.location.toLowerCase().replace(/\s+/g, '-')}`}>
                                                             <div className="projects-location-detail-items">
                                                                 <div className="projects-location-detail-name">
                                                                     <span>{item.location}</span>

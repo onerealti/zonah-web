@@ -24,6 +24,15 @@
 .DS_Store
 *.pem
 
+# temporary tools
+scrape_*.js
+parse_*.js
+fix_links.js
+get_links.js
+extract_saved.js
+temp_*
+sitemap.xml
+
 # debug
 npm-debug.log*
 yarn-debug.log*

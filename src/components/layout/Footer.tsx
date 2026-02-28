@@ -28,7 +28,7 @@ const Footer = () => {
                                         <span>For sales enquiries:<a href="tel:18001234567"><b className="has-text-weight-semibold click_sales_enquiry_number">1800 123 4567</b></a></span>
                                     </li>
                                     <li>
-                                        <span>For other enquiries:<a href="tel:+918012345678"><b className="has-text-weight-semibold click_other_enquiry_number">+91 80 1234 5678</b></a></span>
+                                        <span>For other enquiries:<a href="tel:+918022345678"><b className="has-text-weight-semibold click_other_enquiry_number">+91 80 2234 5678</b></a></span>
                                     </li>
                                     <li>
                                         <span>Email:<a className="email-text" href="mailto:contact@zonahdevelopers.com"><b className="has-text-weight-semibold click_website_email_properties">contact@zonahdevelopers.com</b></a></span>

@@ -6,6 +6,7 @@ import "./css/custom.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import StickyEnquiry from "@/components/layout/StickyEnquiry";
 
 export const metadata: Metadata = {
   title: "Zonah Developers",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body id="home" className="theme-body loaded">
         <Header />
         {children}
+        <StickyEnquiry />
         <Footer />
       </body>
     </html>

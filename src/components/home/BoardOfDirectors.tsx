@@ -58,7 +58,7 @@ const BoardOfDirectors = () => {
                                         <picture>
                                             <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Aman+Verma" alt="Aman Verma" width="350" height="350" />
                                         </picture>
-                                        <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
+                                        <a href="/about-us/board-of-directors/aman-verma" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3.20557 17.7941L17.0996 3.9001" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
                                                 <path d="M17.7943 8.76318V3.20557" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
@@ -69,7 +69,7 @@ const BoardOfDirectors = () => {
                                     <div className="theme-block-title">
                                         <h4 className="is-capitalized">Aman Verma</h4>
                                         <span className="is-capitalized">Chairman and Managing Director</span>
-                                        <a href="#" className="block-link" data-cursor="Know<br>More"></a>
+                                        <a href="/about-us/board-of-directors/aman-verma" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>
                                 </div>
                             </SplideSlide>
@@ -79,7 +79,7 @@ const BoardOfDirectors = () => {
                                         <picture>
                                             <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Siddharth+Mehta" alt="Siddharth Mehta" width="350" height="350" />
                                         </picture>
-                                        <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
+                                        <a href="/about-us/board-of-directors/siddharth-mehta" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3.20557 17.7941L17.0996 3.9001" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
                                                 <path d="M17.7943 8.76318V3.20557" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
@@ -90,7 +90,7 @@ const BoardOfDirectors = () => {
                                     <div className="theme-block-title">
                                         <h4 className="is-capitalized">Siddharth Mehta</h4>
                                         <div className="theme-block-subtitle">Joint Managing Director</div>
-                                        <a href="#" className="block-link" data-cursor="Know<br>More"></a>
+                                        <a href="/about-us/board-of-directors/siddharth-mehta" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>
                                 </div>
                             </SplideSlide>
@@ -100,7 +100,7 @@ const BoardOfDirectors = () => {
                                         <picture>
                                             <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Vikram+Singh" alt="Vikram Singh" width="350" height="350" />
                                         </picture>
-                                        <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
+                                        <a href="/about-us/board-of-directors/vikram-singh" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3.20557 17.7941L17.0996 3.9001" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
                                                 <path d="M17.7943 8.76318V3.20557" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
@@ -111,7 +111,7 @@ const BoardOfDirectors = () => {
                                     <div className="theme-block-title">
                                         <h4 className="is-capitalized">Vikram Singh</h4>
                                         <span className="is-capitalized">Director</span>
-                                        <a href="#" className="block-link" data-cursor="Know<br>More"></a>
+                                        <a href="/about-us/board-of-directors/vikram-singh" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>
                                 </div>
                             </SplideSlide>
@@ -121,7 +121,7 @@ const BoardOfDirectors = () => {
                                         <picture>
                                             <img loading="lazy" className="square-img-fixed-ratio" src="https://placehold.co/350x350/222222/FFF?text=Sameer+Khanna" alt="Sameer Khanna" width="350" height="350" />
                                         </picture>
-                                        <a href="#" className="theme-block-icon" data-cursor="Know<br>More">
+                                        <a href="/about-us/board-of-directors/sameer-khanna" className="theme-block-icon" data-cursor="Know<br>More">
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3.20557 17.7941L17.0996 3.9001" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
                                                 <path d="M17.7943 8.76318V3.20557" stroke="white" strokeWidth="0.982456" strokeLinecap="round" strokeLinejoin="round" />
@@ -132,7 +132,7 @@ const BoardOfDirectors = () => {
                                     <div className="theme-block-title">
                                         <h4 className="is-capitalized">Sameer Khanna</h4>
                                         <span className="is-capitalized">Director</span>
-                                        <a href="#" className="block-link" data-cursor="Know<br>More"></a>
+                                        <a href="/about-us/board-of-directors/sameer-khanna" className="block-link" data-cursor="Know<br>More"></a>
                                     </div>
                                 </div>
                             </SplideSlide>
