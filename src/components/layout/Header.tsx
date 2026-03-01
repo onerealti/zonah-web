@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -58,6 +59,8 @@ export default function Header() {
                                 <ul className="theme-menu is-hidden-mobile">
                                     <li><Link href="/about-us">About</Link></li>
                                     <li><Link href="/residential-projects">Residential</Link></li>
+                                    <li><Link href="/commercial-projects">Commercial</Link></li>
+                                    <li><Link href="/land-development">Land Development</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -69,7 +72,7 @@ export default function Header() {
                             <div className="menu-btn-wrapper">
                                 <Link className="theme-btn line-btn black-btn" href="/upcoming-projects">Upcoming Projects</Link>
                             </div>
-                            <div className="header-search-menu is-flex cursor-pointer" onClick={() => { }}>
+                            <div className="header-search-menu is-flex cursor-pointer" onClick={() => setSearchOpen(true)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width={24} height={24} viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
@@ -113,6 +116,12 @@ export default function Header() {
                 <ul id="header-menu" className="theme-scrollbar mt-12">
                     <li className="header-menu-item is-hidden-tablet">
                         <Link className="header-menu-link" href="/residential-projects" onClick={() => setMenuOpen(false)}>Residential</Link>
+                    </li>
+                    <li className="header-menu-item is-hidden-tablet">
+                        <Link className="header-menu-link" href="/commercial-projects" onClick={() => setMenuOpen(false)}>Commercial</Link>
+                    </li>
+                    <li className="header-menu-item is-hidden-tablet">
+                        <Link className="header-menu-link" href="/land-development" onClick={() => setMenuOpen(false)}>Land Development</Link>
                     </li>
                     <li className="header-menu-item">
                         <Link className="header-menu-link" href="/about-us" onClick={() => setMenuOpen(false)}>About</Link>
@@ -177,6 +186,44 @@ export default function Header() {
                     </ul>
                 </div>
             </nav>
+
+            {/* Search Overlay */}
+            <div id="header-search-menu-detail" className={`header-search-menu-detail insomenu-detail-block ${searchOpen ? 'active' : ''}`}>
+                <div className="header-search-menu-wrapper p-6">
+                    <div className="container">
+                        <div className="columns is-centered">
+                            <div className="column is-8">
+                                <div className="is-flex is-justify-content-space-between is-align-items-center mb-5">
+                                    <h2 className="title is-4 text-white">Search Projects</h2>
+                                    <button className="close-search text-white bg-transparent border-0 cursor-pointer" onClick={() => setSearchOpen(false)}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                                            <line x1={18} y1={6} x2={6} y2={18} />
+                                            <line x1={6} y1={6} x2={18} y2={18} />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div className="search-input-group">
+                                    <input
+                                        type="text"
+                                        className="input is-large bg-transparent text-white border-0 border-bottom"
+                                        placeholder="Type city, project name or location..."
+                                        autoFocus={searchOpen}
+                                        style={{ borderBottom: '2px solid rgba(255,255,255,0.2)', borderRadius: 0, boxShadow: 'none' }}
+                                    />
+                                </div>
+                                <div className="mt-6">
+                                    <p className="text-white is-size-7 is-uppercase tracking-widest mb-4 opacity-50">Popular Searches</p>
+                                    <div className="tags">
+                                        {['Zonah City', 'Bangalore', 'Luxury Villas', 'Sarjapur Road'].map((tag, i) => (
+                                            <span key={i} className="tag is-dark is-medium mr-2 mb-2 cursor-pointer">{tag}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header >
     );
 }

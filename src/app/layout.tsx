@@ -7,6 +7,7 @@ import "./css/custom.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyEnquiry from "@/components/layout/StickyEnquiry";
+import CookieModal from "@/components/layout/CookieModal";
 
 export const metadata: Metadata = {
   title: "Zonah Developers",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Header />
         {children}
         <StickyEnquiry />
+        <CookieModal />
         <Footer />
       </body>
     </html>

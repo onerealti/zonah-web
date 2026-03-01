@@ -1,102 +1,86 @@
 import React from 'react';
 
 const PROJECTS: Record<string, {
-    name: string;
-    location: string;
-    city: string;
-    type: string;
-    landExtent: string;
-    completion: string;
-    development: string;
-    floors?: string;
-    rera: string;
-    description: string[];
-    features: string[];
-    specifications: string[];
+  name: string;
+  location: string;
+  city: string;
+  type: string;
+  landExtent: string;
+  completion: string;
+  development: string;
+  floors?: string;
+  rera: string;
+  description: string[];
+  features: string[];
+  specifications: string[];
 }> = {
-    'the-exchange': {
-        name: 'Zonah The Exchange',
-        location: 'Hebbal, Bangalore',
-        city: 'Bangalore',
-        type: 'Grade A Office Tower',
-        landExtent: '4.2 Acres',
-        completion: 'Q2 2027',
-        development: '1.8 Mn Sq.ft.',
-        floors: 'Ground + 28 floors',
-        rera: 'PRM/KA/RERA/1251/309/OC/2024/000032',
-        description: [
-            'Zonah The Exchange is a landmark Grade-A office tower in Hebbal — one of Bangalore\'s premier commercial corridors with direct access to the Airport Highway, Outer Ring Road, and Manyata Tech Park.',
-            'Designed to international specifications, The Exchange offers large, column-free floor plates, intelligent building management systems, and premium lobby experiences. Targeting LEED Platinum certification, the tower reflects Zonah Developers\' commitment to sustainable, future-ready commercial development.',
-            'With a curated mix of anchor tenants, amenity floors, and high-street retail at the podium, The Exchange is conceived as a full-service workplace destination.',
-        ],
-        features: ['Large 25,000+ sq.ft. Column-free Floor Plates', 'Smart Building Management System (BMS)', 'LEED Platinum Pre-certified', 'Premium Double-height Lobby', 'High-speed Elevators (18 Lifts)', 'Basement + 4 Levels of Structured Parking', 'Rooftop Restaurant & Lounge', 'On-site EV Charging Infrastructure'],
-        specifications: ['Floor Plate: ~25,000 sq.ft. per floor', 'Floor-to-ceiling height: 3.2m', 'Efficiency Ratio: 82%+', 'Loading: 100 kg/sq.ft.', 'Power: 10 W/sq.ft.', 'HVAC: Variable Refrigerant Volume (VRV)', 'Seismic Zone: II (compliant)'],
-    },
-    'tech-park-one': {
-        name: 'Zonah Tech Park One',
-        location: 'Hitec City, Hyderabad',
-        city: 'Hyderabad',
-        type: 'IT & Technology Park',
-        landExtent: '7.8 Acres',
-        completion: 'Q4 2027',
-        development: '3.2 Mn Sq.ft.',
-        floors: 'Multiple blocks, Ground + 20 floors each',
-        rera: 'P02400009871',
-        description: [
-            'Zonah Tech Park One is a next-generation, campus-style technology park in HITEC City — the epicentre of Hyderabad\'s world-class IT industry. Comprising three interconnected office blocks set within a master-planned precinct, Tech Park One offers scalable, flexible workspaces from 50,000 to 500,000 sq.ft.',
-            'With direct access to Raidurg Metro Station and the Financial District Expressway, Tech Park One prioritises both talent accessibility and business visibility. The campus incorporates extensive green spaces, a world-class food court, creche facilities, and a range of amenity offerings for occupiers.',
-        ],
-        features: ['Campus-style IT Park (3 blocks)', 'SEZ & non-SEZ options', '25,000+ sq.ft. average floor plate', 'Dedicated food court (800 pax)', 'Creche & day care facility', 'Direct metro access', 'IGBC Green Building Certified', 'Rainwater harvesting & STP'],
-        specifications: ['Floor Plate: ~25,000 sq.ft.', 'SEZ Notified: Yes (applicable blocks)', 'Power: 12 W/sq.ft.', 'Efficiency Ratio: 80%+', 'Parking: 1 bay per 100 sq.ft.', 'Data Centre-ready infrastructure'],
-    },
-    'boulevard-square': {
-        name: 'Zonah Boulevard Square',
-        location: 'Mahalaxmi, Mumbai',
-        city: 'Mumbai',
-        type: 'Mixed-use Commercial',
-        landExtent: '5.5 Acres',
-        completion: 'Q4 2028',
-        development: '3 Mn Sq.ft.',
-        floors: 'Sky Tower (Ground + 38) & Bay Tower (Ground + 32)',
-        rera: 'P51900041234',
-        description: [
-            'Zonah Boulevard Square is an iconic mixed-use commercial destination at Mahalaxmi — one of South Mumbai\'s most prestigious business addresses. Rising across two landmark towers, Boulevard Square redefines the Mumbai skyline while offering a curated blend of Grade-A offices, premium retail, and fine dining.',
-            'The Sky Tower and Bay Tower together offer over 3 million sq.ft. of best-in-class commercial space, catering to global corporations, financial institutions, and professional services firms seeking a prestigious South Mumbai address.',
-            'A 250,000 sq.ft. luxury retail podium connecting both towers brings together flagship stores, restaurants, and lifestyle brands — creating Mumbai\'s most desirable work-play destination.',
-        ],
-        features: ['Twin landmark towers', 'Grade-A Office floors (Sky & Bay Towers)', 'Luxury retail podium (2.5L sq.ft.)', 'Fine dining rooftop (Sky Tower)', 'Premium lobby with double-height atria', '8-level structured parking (2,000+ bays)', 'LEED Platinum pre-certified', 'Helipads on both towers'],
-        specifications: ['Sky Tower: Ground + 38 floors', 'Bay Tower: Ground + 32 floors', 'Floor Plate: ~30,000 sq.ft.', 'Power: 10 W/sq.ft.', 'Efficiency Ratio: 85%+', 'Floor-to-ceiling height: 3.4m'],
-    },
-    'gateway-towers': {
-        name: 'Zonah Gateway Towers',
-        location: 'Anna Salai, Chennai',
-        city: 'Chennai',
-        type: 'Twin Office Towers',
-        landExtent: '3.8 Acres',
-        completion: 'Q1 2027',
-        development: '1.5 Mn Sq.ft.',
-        floors: 'Twin towers — Ground + 26 floors each',
-        rera: 'TN/01/Commercial/0051/2023',
-        description: [
-            'Zonah Gateway Towers is a landmark commercial development on Anna Salai — the historic and commercially significant arterial road at the heart of Chennai\'s central business district.',
-            'Comprising twin 26-storey office towers, Gateway Towers offers flexible Grade-A workspaces designed to accommodate a wide range of occupiers — from boutique firms to large multinational corporations. The project\'s visibility, central location, and premium specification make it the address of choice for Chennai\'s business elite.',
-        ],
-        features: ['Twin office towers', 'Panoramic city views from upper floors', 'Premium grade-A specification', 'Large flexible floor plates', 'Conference & event facilities', 'Ground-floor retail & F&B', 'Multi-level basement parking', 'IGBC Green Building Certified'],
-        specifications: ['Floor Plate: ~18,000 sq.ft.', 'Floor-to-ceiling height: 3.0m', 'Efficiency Ratio: 80%+', 'Power: 10 W/sq.ft.', 'Parking: 1,200+ bays (both towers)'],
-    },
+  'zonah-crescent': {
+    name: 'Zonah Crescent',
+    location: 'Road no 12, Banjara Hills, Hyderabad',
+    city: 'Hyderabad',
+    type: 'Commercial Complex',
+    landExtent: '7,456 sq.ft.',
+    completion: 'Ongoing (Leasing Open)',
+    development: '43,024 sq.ft.',
+    floors: 'Cellar 1-3 + Ground + 4 floors',
+    rera: 'Ongoing Project',
+    description: [
+      'Zonah Crescent is a premium commercial complex strategically located on Road No. 12, Banjara Hills — one of Hyderabad\'s most upscale and sought-after business addresses. Positioned between landmark locations like Ohri\'s and Landmark, it offers unparalleled visibility and business prestige.',
+      'The project features a total super built-up area of 43,024 sq.ft. across four floors and a ground level, supported by an extensive three-level cellar parking system of 29,850 sq.ft. to ensure ample space for tenants and visitors.',
+      'Conceived as a boutique business hub, Zonah Crescent is ideal for corporate offices, premium retail flagship stores, and high-end clinics seeking a foothold in the heart of Hyderabad.',
+    ],
+    features: ['Prime Banjara Hills Location', 'Excellent Visibility on Road No. 12', '43,024 sq.ft. Total Floor Space', 'Three Levels of Cellar Parking (29,850 sq.ft.)', 'Vibrant Business Neighborhood', 'Modern Architectural Design', 'Dedicated Leasing Options Available'],
+    specifications: ['Ground Floor: 7,456 sq.ft.', 'Typical Floor (1st-4th): 8,892 sq.ft.', 'Cellar levels: ~10,000 sq.ft. each', 'Total Parking: 3 Cellars', 'Power: High-capacity back-up', 'Status: Ongoing / Ready for Lease'],
+  },
+  'paradise-pearl': {
+    name: 'Paradise Pearl',
+    location: 'MG Road, Secunderabad',
+    city: 'Hyderabad',
+    type: 'Commercial & Residential Complex',
+    landExtent: '45,000 sq.ft.',
+    completion: 'Completed',
+    development: '45,000 sq.ft.',
+    floors: 'Ground + 5 floors',
+    rera: 'Completed Project',
+    description: [
+      'Paradise Pearl is a landmark 45,000 sq.ft. five-storied complex located on the historic MG Road in Secunderabad. Situated in one of the most commercially active hubs of the twin cities, it enjoys proximity to iconic landmarks like Paradise Hotel, KFC, and Chermas.',
+      'The project was designed to bring elegant yet affordable spaces to one of the most happening areas in Secunderabad, offering a mix of commercial viability and residential comfort.',
+      'With its prime position and high footfall counts, Paradise Pearl remains one of the most sought-after developments in the Secunderabad corridor.',
+    ],
+    features: ['Centrally located on MG Road', 'High-footfall Commercial Hub', 'Close to Paradise Hotel & KFC', '45,000 sq.ft. Total Area', 'Multi-storied Development', 'Proximity to Public Transport', 'Robust Infrastructure'],
+    specifications: ['Total Area: 45,000 sq.ft.', 'Structure: Ground + 5 floors', 'Location: Commercial epicenter', 'Status: Fully Completed', 'Occupancy: Mixed use'],
+  },
+  'zonah-neptune': {
+    name: 'Zonah Neptune (SVM Mall)',
+    location: 'Road no 36, Jubilee Hills, Hyderabad',
+    city: 'Hyderabad',
+    type: 'Retail & Entertainment Hub',
+    landExtent: '1,400 sq.m.',
+    completion: 'Completed',
+    development: '53,923 sq.ft.',
+    floors: 'Basements + Ground + 4 floors',
+    rera: 'Completed Project',
+    description: [
+      'Zonah Neptune, widely known as the home of SVM Mall, is a landmark retail and entertainment destination in Jubilee Hills — Hyderabad\'s premier lifestyle district. Since its inception, it has redefined innovative entertainment in the city.',
+      'The hub boasts the largest console gaming station in the country, spanning a massive 9,000 sq.ft. arcade, and features India\'s first "glow" lane Bowling Alley. The vibrant interiors and ultra-contemporary design cater to the youth and families of Hyderabad.',
+      'With a total retail built-up area of 53,923 sq.ft., including basements, the complex houses a variety of entertainment zones, fine dining, bar options, and lifestyle retail stores.',
+    ],
+    features: ['Premier Jubilee Hills Address', 'Home to SVM Mall & Gaming Zone', 'Largest console gaming station in India (9,000 sq.ft.)', 'India\'s first "glow" lane Bowling Alley', 'High-traffic Retail Zone', 'Diverse F&B Options & Bar', 'Two Levels of Basement Parking'],
+    specifications: ['Retail Built Up: 53,923 sq.ft.', 'Plot Area: 1,400 sq.m.', 'Basements: 2 Levels', 'Gaming Zone: 9,000 sq.ft.', 'Status: Fully Operational'],
+  },
 };
 
 export async function generateStaticParams() {
-    return Object.keys(PROJECTS).map((slug) => ({ slug }));
+  return Object.keys(PROJECTS).map((slug) => ({ slug }));
 }
 
 export default function CommercialProjectDetail({ params }: { params: { slug: string } }) {
-    const project = PROJECTS[params.slug];
+  const project = PROJECTS[params.slug];
 
-    if (!project) {
-        return (
-            <main className="home-page-replica" dangerouslySetInnerHTML={{
-                __html: `
+  if (!project) {
+    return (
+      <main className="home-page-replica" dangerouslySetInnerHTML={{
+        __html: `
         <section class="section section-inner-page pt-6">
           <div class="container has-text-centered">
             <h2>Project not found.</h2>
@@ -104,10 +88,10 @@ export default function CommercialProjectDetail({ params }: { params: { slug: st
           </div>
         </section>
       ` }} />
-        );
-    }
+    );
+  }
 
-    const html = `
+  const html = `
 <section class="section section-inner-page overflow-visible pt-6 pb-6">
   <div class="container">
     <div class="mb-4">
@@ -178,7 +162,7 @@ export default function CommercialProjectDetail({ params }: { params: { slug: st
 </section>
   `;
 
-    return (
-        <main className="home-page-replica commercial-project-detail-page" dangerouslySetInnerHTML={{ __html: html }} />
-    );
+  return (
+    <main className="home-page-replica commercial-project-detail-page" dangerouslySetInnerHTML={{ __html: html }} />
+  );
 }
