@@ -20,7 +20,7 @@ export function getClient() {
             projectId,
             dataset,
             apiVersion,
-            useCdn: true,
+            useCdn: false,
         })
         return _client
     } catch (error) {
@@ -39,7 +39,7 @@ export const client = (() => {
                   projectId,
                   dataset,
                   apiVersion,
-                  useCdn: true,
+                useCdn: false,
               })
             : null
     } catch {

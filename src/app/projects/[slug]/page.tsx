@@ -127,15 +127,24 @@ function ProjectDetailUI({ project }: { project: DetailedProject }) {
                   {[1, 2, 3].map(i => (
                     <SplideSlide key={i}>
                       <div style={{
-                        background: project.gradient,
+                        background: project.mainImageUrl ? undefined : project.gradient,
                         width: '100%', height: '420px',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         borderRadius: '4px',
+                        overflow: 'hidden',
                       }}>
-                        <div style={{ textAlign: 'center' }}>
-                          <div style={{ color: 'rgba(255,255,255,0.1)', fontSize: '100px', fontWeight: 200, letterSpacing: '12px', lineHeight: 1, fontFamily: 'Georgia, serif' }}>ZD</div>
-                          <p style={{ color: 'rgba(255,255,255,0.3)', letterSpacing: '3px', textTransform: 'uppercase', fontSize: '0.8em', marginTop: 14 }}>{project.name}</p>
-                        </div>
+                        {project.mainImageUrl ? (
+                          <img
+                            src={project.mainImageUrl}
+                            alt={project.name}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                          />
+                        ) : (
+                          <div style={{ textAlign: 'center' }}>
+                            <div style={{ color: 'rgba(255,255,255,0.1)', fontSize: '100px', fontWeight: 200, letterSpacing: '12px', lineHeight: 1, fontFamily: 'Georgia, serif' }}>ZD</div>
+                            <p style={{ color: 'rgba(255,255,255,0.3)', letterSpacing: '3px', textTransform: 'uppercase', fontSize: '0.8em', marginTop: 14 }}>{project.name}</p>
+                          </div>
+                        )}
                       </div>
                     </SplideSlide>
                   ))}
@@ -145,7 +154,7 @@ function ProjectDetailUI({ project }: { project: DetailedProject }) {
               <div className="projects-properties-menu position-sticky-block">
                 <ul id="project-menu" className="is-flex is-align-items-center is-gap-2 theme-scrollbar-horizontal js-scroll fade-in-bottom scrolled">
                   {navLinks.map(({ id, label }) => (
-                    <li key={id} className={`projects-properties-menu-item hide_${label.toLowerCase()}${activeSection === id ? ' active' : ''}`}>
+                    <li key={id} className={`projects-properties-menu-item${activeSection === id ? ' active' : ''}`}>
                       <a
                         className={`theme-btn gray-btn line-btn rounded-pill${activeSection === id ? ' is-active' : ''}`}
                         href={`#${id}`}
@@ -158,7 +167,7 @@ function ProjectDetailUI({ project }: { project: DetailedProject }) {
                 </ul>
               </div>
 
-              <div id="project-about" className="projects-sub-section mb-5 project-about hide_about">
+              <div id="project-about" className="projects-sub-section mb-5 project-about">
                 <div className="sub-section-title js-scroll fade-in-top scrolled">
                   <span className="theme-title">{project.city}</span>
                   <h1>{project.name}</h1>
@@ -209,7 +218,7 @@ function ProjectDetailUI({ project }: { project: DetailedProject }) {
                 </div>
               </div>
 
-              <div id="project-plans" className="projects-sub-section mb-5 project-plans hide_plans">
+              <div id="project-plans" className="projects-sub-section mb-5 project-plans">
                 <div className="sub-section-title js-scroll fade-in-top scrolled">
                   <h2>Plans</h2>
                 </div>
@@ -257,7 +266,7 @@ function ProjectDetailUI({ project }: { project: DetailedProject }) {
                 </div>
               </div>
 
-              <div id="project-amenities" className="projects-sub-section mb-5 project-amenities hide_amenities">
+              <div id="project-amenities" className="projects-sub-section mb-5 project-amenities">
                 <div className="sub-section-title js-scroll fade-in-top scrolled">
                   <h2>Amenities</h2>
                 </div>
@@ -279,7 +288,7 @@ function ProjectDetailUI({ project }: { project: DetailedProject }) {
                 </div>
               </div>
 
-              <div id="project-location" className="projects-sub-section mb-5 hide_location">
+              <div id="project-location" className="projects-sub-section mb-5">
                 <div className="sub-section-title js-scroll fade-in-top scrolled">
                   <h2>Location</h2>
                 </div>
@@ -299,14 +308,18 @@ function ProjectDetailUI({ project }: { project: DetailedProject }) {
                 </div>
               </div>
 
-              <div id="project-gallery" className="projects-sub-section mb-5 hide_gallery">
+              <div id="project-gallery" className="projects-sub-section mb-5">
                 <div className="sub-section-title js-scroll fade-in-top scrolled">
                   <h2>Gallery</h2>
                 </div>
                 <div className="columns is-multiline is-mobile">
                   {[1, 2, 3, 4].map(n => (
                     <div key={n} className="column is-6-mobile is-3-tablet">
-                      <div style={{ background: project.gradient, height: 140, borderRadius: 4, opacity: n % 2 === 0 ? 0.7 : 1 }} />
+                      <div style={{ height: 140, borderRadius: 4, overflow: 'hidden', opacity: n % 2 === 0 ? 0.7 : 1, background: project.mainImageUrl ? undefined : project.gradient }}>
+                        {project.mainImageUrl ? (
+                          <img src={project.mainImageUrl} alt={`${project.name} ${n}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        ) : null}
+                      </div>
                     </div>
                   ))}
                 </div>

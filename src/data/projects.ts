@@ -26,6 +26,7 @@ export interface ListingProject {
 	slug: string;
 	segment: ProjectSegment;
 	badgeStatus?: string;
+	mainImageUrl?: string;
 	city: string;
 	subLocation: string;
 	title: string;
@@ -52,6 +53,7 @@ export let listingProjects: ListingProject[] = [];
 
 export interface DetailedProject {
 	name: string;
+	mainImageUrl?: string;
 	location: string;
 	city: string;
 	price: string;
@@ -80,16 +82,27 @@ function normalizeCity(city: string): string {
 	return city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
 }
 
+function getBadgeStatus(status: string, badgeStatus?: string): string | undefined {
+	if (badgeStatus && badgeStatus.trim()) return badgeStatus;
+	const normalized = (status || '').toLowerCase();
+	if (normalized === 'ongoing') return 'Under Construction';
+	if (normalized === 'upcoming') return 'Upcoming';
+	if (normalized === 'completed') return 'Ready to Move';
+	return undefined;
+}
+
 /**
  * Transform Sanity project document to ListingProject format
  */
 function transformToListingProject(doc: any): ListingProject {
+	const derivedSubLocation = (doc.subLocation || (typeof doc.location === 'string' ? doc.location.split(',')[0]?.trim() : '') || '').trim();
 	return {
 		slug: doc.slug?.current || doc.slug || '',
 		segment: (doc.segment || 'residential') as ProjectSegment,
-		badgeStatus: doc.badgeStatus,
+		badgeStatus: getBadgeStatus(doc.status, doc.badgeStatus),
+		mainImageUrl: doc.mainImage?.asset?.url,
 		city: normalizeCity(doc.city || ''),
-		subLocation: doc.subLocation || '',
+		subLocation: derivedSubLocation,
 		title: doc.title || '',
 		projectTypeDetail: doc.projectTypeDetail || 'Project',
 		priceRange: doc.priceRange || 'Price on Request',
@@ -117,7 +130,11 @@ function getStatusClass(status: string): string {
  * Transform Sanity project document to DetailedProject format
  */
 function transformToDetailedProject(doc: any): DetailedProject {
-	const amenities = (doc.amenities || []).map((a: any) => ({
+	const amenitySource = (doc.amenities && doc.amenities.length > 0)
+		? doc.amenities
+		: (doc.highlights || []).slice(0, 6).map((label: string) => ({ label, amenityType: 'default' }));
+
+	const amenities = amenitySource.map((a: any) => ({
 		label: a.label || '',
 		svgPath: SVG_AMENITY_PATHS[a.amenityType || 'default'] || SVG_AMENITY_PATHS.default,
 	}))
@@ -136,6 +153,7 @@ function transformToDetailedProject(doc: any): DetailedProject {
 
 	return {
 		name: doc.title || '',
+		mainImageUrl: doc.mainImage?.asset?.url,
 		location: doc.location || `${doc.subLocation || ''}, ${normalizeCity(doc.city || '')}`.trim().replace(/^,\s*/, ''),
 		city: normalizeCity(doc.city || ''),
 		price: doc.priceRange || 'Price on Request',
@@ -453,7 +471,7 @@ let _initialized = false;
  * This runs automatically on first import
  */
 async function initializeProjects(): Promise<void> {
-	if (_initialized) return;
+	if (_initialized && process.env.NODE_ENV === 'production') return;
 
 	try {
 		const sanityProjects = await getProjects();
@@ -480,7 +498,9 @@ async function initializeProjects(): Promise<void> {
 		detailedProjects = FALLBACK_DETAILED_PROJECTS;
 	}
 
-	_initialized = true;
+	if (process.env.NODE_ENV === 'production') {
+		_initialized = true;
+	}
 }
 
 /**

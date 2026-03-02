@@ -3,6 +3,7 @@ import React from 'react';
 interface ProjectCardProps {
     slug: string;
     badgeStatus?: string;
+    mainImageUrl?: string;
     city: string;
     subLocation: string;
     title: string;
@@ -17,6 +18,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
     slug,
     badgeStatus,
+    mainImageUrl,
     city,
     subLocation,
     title,
@@ -38,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 )}
                 <div className="projects-img">
                     <div className="img-fixed-ratio" style={{
-                        background: mainImageGradient,
+                        background: mainImageUrl ? undefined : mainImageGradient,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -46,13 +48,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         aspectRatio: '16/9',
                         overflow: 'hidden'
                     }}>
-                        <span style={{
-                            color: 'rgba(255,255,255,0.08)',
-                            fontSize: '80px',
-                            fontWeight: 200,
-                            letterSpacing: '4px',
-                            fontFamily: "'Georgia', serif"
-                        }}>ZD</span>
+                        {mainImageUrl ? (
+                            <img
+                                src={mainImageUrl}
+                                alt={title}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                        ) : (
+                            <span style={{
+                                color: 'rgba(255,255,255,0.08)',
+                                fontSize: '80px',
+                                fontWeight: 200,
+                                letterSpacing: '4px',
+                                fontFamily: "'Georgia', serif"
+                            }}>ZD</span>
+                        )}
                     </div>
                     <div className="project-logo">
                         <div style={{
@@ -73,7 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <div className="project-title-and-price mt-4">
                     <div className="project-title">
                         <h2>{title}</h2>
-                        <span>{subLocation}, {city.charAt(0).toUpperCase() + city.slice(1)}</span>
+                        <span>{subLocation ? `${subLocation}, ` : ''}{city.charAt(0).toUpperCase() + city.slice(1)}</span>
                     </div>
                     <div className="project-desc-price">
                         <span>{projectTypeDetail}</span>

@@ -19,7 +19,11 @@ export const PROJECTS_QUERY = groq`
     developmentSize,
     totalUnits,
     area,
-    mainImage,
+    mainImage {
+      asset->{
+        url
+      }
+    },
     mainImageGradient,
     description,
     highlights,
@@ -56,7 +60,11 @@ export const PROJECT_BY_SLUG_QUERY = groq`
     developmentSize,
     totalUnits,
     area,
-    mainImage,
+    mainImage {
+      asset->{
+        url
+      }
+    },
     mainImageGradient,
     description,
     highlights,
@@ -93,7 +101,11 @@ export const PROJECTS_BY_SEGMENT_QUERY = groq`
     developmentSize,
     totalUnits,
     area,
-    mainImage,
+    mainImage {
+      asset->{
+        url
+      }
+    },
     mainImageGradient,
     description,
     highlights,

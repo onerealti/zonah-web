@@ -137,6 +137,17 @@ async function deleteExistingProjects() {
  */
 async function uploadProject(project) {
   try {
+    // Log what we're uploading for the first project (for debugging)
+    if (uploadProject.count === 1) {
+      console.log('\n📤 Sample project structure:');
+      console.log(`   Title: ${project.title}`);
+      console.log(`   Bedrooms: ${project.bedrooms}`);
+      console.log(`   Amenities: ${project.amenities?.length || 0} items`);
+      console.log(`   Floor Plans: ${project.floorPlans?.length || 0} items`);
+      console.log(`   Description: ${project.description?.length || 0} paragraphs\n`);
+    }
+    uploadProject.count = (uploadProject.count || 0) + 1;
+
     const result = await client.create(project);
     console.log(`  ✓ ${project.title}`);
     return result;
