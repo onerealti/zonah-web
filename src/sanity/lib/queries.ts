@@ -1,4 +1,4 @@
-import { client } from './client'
+import { getClient } from './client'
 import { groq } from 'next-sanity'
 
 export const PROJECTS_QUERY = groq`
@@ -114,6 +114,7 @@ export const PROJECTS_BY_SEGMENT_QUERY = groq`
  * Fetch all projects from Sanity
  */
 export async function getProjects() {
+  const client = getClient()
   if (!client) {
     console.warn('Sanity client not configured. Using fallback data.')
     return []
@@ -130,6 +131,7 @@ export async function getProjects() {
  * Fetch a single project by slug
  */
 export async function getProjectBySlug(slug: string) {
+  const client = getClient()
   if (!client) {
     console.warn('Sanity client not configured. Using fallback data.')
     return null
@@ -146,6 +148,7 @@ export async function getProjectBySlug(slug: string) {
  * Fetch projects by segment
  */
 export async function getProjectsBySegment(segment: string) {
+  const client = getClient()
   if (!client) {
     console.warn('Sanity client not configured. Using fallback data.')
     return []
