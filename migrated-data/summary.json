@@ -1,0 +1,15 @@
+{
+  "totalProjects": 32,
+  "bySegment": {
+    "residential": 9,
+    "commercial": 6,
+    "land-development": 17
+  },
+  "byStatus": {
+    "ongoing": 2,
+    "completed": 12,
+    "upcoming": 1,
+    "unknown": 17
+  },
+  "errors": 0
+}
