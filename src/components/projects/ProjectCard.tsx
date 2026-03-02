@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ProjectCardProps {
     slug: string;
+    segment: 'residential' | 'commercial' | 'land-development';
     badgeStatus?: string;
     mainImageUrl?: string;
     city: string;
@@ -17,6 +18,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
     slug,
+    segment,
     badgeStatus,
     mainImageUrl,
     city,
@@ -29,6 +31,35 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     totalUnits,
     mainImageGradient,
 }) => {
+    const valueOrNA = (value?: string) => value && value.trim() ? value : 'N/A';
+
+    const houseIcon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>;
+    const bedIcon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M2 4v16" /><path d="M2 8h18a2 2 0 0 1 2 2v10" /><path d="M2 17h20" /><path d="M6 8v9" /></svg>;
+    const gridIcon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg>;
+    const usersIcon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
+
+    const configurationItems =
+        segment === 'residential'
+            ? [
+                { label: 'Project Type', value: valueOrNA(projectTypeDetail), icon: houseIcon },
+                { label: 'Bedrooms', value: valueOrNA(bedrooms), icon: bedIcon },
+                { label: 'Development Size', value: valueOrNA(developmentSize), icon: gridIcon },
+                { label: 'Total Units', value: valueOrNA(totalUnits), icon: usersIcon },
+            ]
+            : segment === 'commercial'
+                ? [
+                    { label: 'Asset Type', value: valueOrNA(projectTypeDetail), icon: houseIcon },
+                    { label: 'Development Size', value: valueOrNA(developmentSize), icon: gridIcon },
+                    { label: 'Total Inventory', value: valueOrNA(totalUnits), icon: usersIcon },
+                    { label: 'Price Range', value: valueOrNA(priceRange), icon: bedIcon },
+                ]
+                : [
+                    { label: 'Project Type', value: valueOrNA(projectTypeDetail), icon: houseIcon },
+                    { label: 'Plot / Area', value: valueOrNA(developmentSize !== 'N/A' ? developmentSize : totalUnits), icon: gridIcon },
+                    { label: 'Location', value: valueOrNA(subLocation || city), icon: usersIcon },
+                    { label: 'Price Range', value: valueOrNA(priceRange), icon: bedIcon },
+                ];
+
     return (
         <div className="column is-12-mobile is-6-tablet is-6-desktop is-4-widescreen projects-col" data-city={city.toLowerCase()}>
             <div className="project-vertical-block">
@@ -92,50 +123,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </div>
                 <div className="project-configurations">
                     <ul>
-                        <li>
-                            <div className="project-configurations-items">
-                                <div className="project-configurations-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        {configurationItems.map((item) => (
+                            <li key={item.label}>
+                                <div className="project-configurations-items">
+                                    <div className="project-configurations-icon">{item.icon}</div>
+                                    <div className="project-configurations-desc">
+                                        <h4>{item.label}</h4>
+                                        <span>{item.value}</span>
+                                    </div>
                                 </div>
-                                <div className="project-configurations-desc">
-                                    <h4>Project Type</h4>
-                                    <span>{projectTypeDetail}</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="project-configurations-items">
-                                <div className="project-configurations-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M2 4v16" /><path d="M2 8h18a2 2 0 0 1 2 2v10" /><path d="M2 17h20" /><path d="M6 8v9" /></svg>
-                                </div>
-                                <div className="project-configurations-desc">
-                                    <h4>Bedrooms</h4>
-                                    <span>{bedrooms}</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="project-configurations-items">
-                                <div className="project-configurations-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg>
-                                </div>
-                                <div className="project-configurations-desc">
-                                    <h4>Development Size</h4>
-                                    <span>{developmentSize}</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="project-configurations-items">
-                                <div className="project-configurations-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                                </div>
-                                <div className="project-configurations-desc">
-                                    <h4>Total Units</h4>
-                                    <span>{totalUnits}</span>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className="project-contact-detail">
