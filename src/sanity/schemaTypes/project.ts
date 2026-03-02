@@ -44,13 +44,13 @@ export default defineType({
             validation: (Rule) => Rule.required(),
             options: {
                 list: [
-                    { title: 'Bangalore', value: 'bangalore' },
-                    { title: 'Hyderabad', value: 'hyderabad' },
-                    { title: 'Chennai', value: 'chennai' },
-                    { title: 'Mumbai', value: 'mumbai' },
-                    { title: 'Kochi', value: 'kochi' },
-                    { title: 'Goa', value: 'goa' },
-                    { title: 'Mangalore', value: 'mangalore' },
+                    { title: 'Bangalore', value: 'Bangalore' },
+                    { title: 'Hyderabad', value: 'Hyderabad' },
+                    { title: 'Chennai', value: 'Chennai' },
+                    { title: 'Mumbai', value: 'Mumbai' },
+                    { title: 'Kochi', value: 'Kochi' },
+                    { title: 'Goa', value: 'Goa' },
+                    { title: 'Mangalore', value: 'Mangalore' },
                 ]
             }
         }),
@@ -113,6 +113,12 @@ export default defineType({
             title: 'Total Units',
             type: 'string',
             description: 'e.g. 320 Units, 20 Units, or N/A',
+        }),
+        defineField({
+            name: 'area',
+            title: 'Area / Size',
+            type: 'string',
+            description: 'e.g. 1250 sq.ft., 3700 sq.ft., or N/A',
         }),
         defineField({
             name: 'mainImage',

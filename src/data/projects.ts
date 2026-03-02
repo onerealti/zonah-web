@@ -72,6 +72,15 @@ export interface DetailedProject {
 }
 
 /**
+ * Normalize city name (capitalize first letter, handle lowercase)
+ */
+function normalizeCity(city: string): string {
+	if (!city) return '';
+	// Capitalize first letter of each word
+	return city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
+}
+
+/**
  * Transform Sanity project document to ListingProject format
  */
 function transformToListingProject(doc: any): ListingProject {
@@ -79,10 +88,10 @@ function transformToListingProject(doc: any): ListingProject {
 		slug: doc.slug?.current || doc.slug || '',
 		segment: (doc.segment || 'residential') as ProjectSegment,
 		badgeStatus: doc.badgeStatus,
-		city: doc.city || '',
+		city: normalizeCity(doc.city || ''),
 		subLocation: doc.subLocation || '',
 		title: doc.title || '',
-		projectTypeDetail: doc.projectTypeDetail || '',
+		projectTypeDetail: doc.projectTypeDetail || 'Project',
 		priceRange: doc.priceRange || 'Price on Request',
 		bedrooms: doc.bedrooms || 'N/A',
 		developmentSize: doc.developmentSize || 'N/A',
@@ -90,6 +99,18 @@ function transformToListingProject(doc: any): ListingProject {
 		mainImageGradient: doc.mainImageGradient || 'linear-gradient(135deg, #333, #666)',
 		budgetCr: doc.budgetCr || 0,
 	}
+}
+
+/**
+ * Map status to CSS class
+ */
+function getStatusClass(status: string): string {
+	const statusMap: Record<string, string> = {
+		ongoing: 'under-construction',
+		completed: 'ready-to-move',
+		upcoming: 'upcoming-project',
+	};
+	return statusMap[status?.toLowerCase()] || 'ready-to-move';
 }
 
 /**
@@ -101,21 +122,33 @@ function transformToDetailedProject(doc: any): DetailedProject {
 		svgPath: SVG_AMENITY_PATHS[a.amenityType || 'default'] || SVG_AMENITY_PATHS.default,
 	}))
 
+	// Handle description - can be array of text blocks or simple array
+	let descriptionArray: string[] = [];
+	if (Array.isArray(doc.description)) {
+		descriptionArray = doc.description.map((d: any) => 
+			typeof d === 'string' ? d : (d?.text || d?.value || '')
+		).filter(Boolean);
+	} else if (doc.description) {
+		descriptionArray = [String(doc.description)];
+	}
+
+	const status = doc.status || 'completed';
+
 	return {
 		name: doc.title || '',
-		location: doc.location || '',
-		city: doc.city || '',
+		location: doc.location || `${doc.subLocation || ''}, ${normalizeCity(doc.city || '')}`.trim().replace(/^,\s*/, ''),
+		city: normalizeCity(doc.city || ''),
 		price: doc.priceRange || 'Price on Request',
 		bhk: doc.bedrooms || 'N/A',
-		status: doc.status || 'completed',
-		statusClass: doc.status === 'ongoing' ? 'under-construction' : 'ready-to-move',
+		status: status.charAt(0).toUpperCase() + status.slice(1),
+		statusClass: getStatusClass(status),
 		area: doc.area || 'N/A',
 		totalUnits: doc.totalUnits || 'N/A',
 		developmentSize: doc.developmentSize || 'N/A',
-		type: doc.projectTypeDetail || '',
+		type: doc.projectTypeDetail || 'Project',
 		possession: doc.possession || 'Ready',
 		rera: doc.rera || 'N/A',
-		description: Array.isArray(doc.description) ? doc.description : [doc.description || ''],
+		description: descriptionArray,
 		amenities,
 		highlights: doc.highlights || [],
 		floorPlans: (doc.floorPlans || []).map((fp: any) => ({
