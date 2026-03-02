@@ -114,17 +114,23 @@ export default function Header() {
                     </svg>
                 </button>
                 <ul id="header-menu" className="theme-scrollbar mt-12">
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/residential-projects" onClick={() => setMenuOpen(false)}>Residential</Link>
-                    </li>
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/commercial-projects" onClick={() => setMenuOpen(false)}>Commercial</Link>
-                    </li>
-                    <li className="header-menu-item is-hidden-tablet">
-                        <Link className="header-menu-link" href="/land-development" onClick={() => setMenuOpen(false)}>Land Development</Link>
+                    <li className="header-menu-item">
+                        <Link className="header-menu-link" href="/" onClick={() => setMenuOpen(false)}>Home</Link>
                     </li>
                     <li className="header-menu-item">
                         <Link className="header-menu-link" href="/about-us" onClick={() => setMenuOpen(false)}>About</Link>
+                    </li>
+                    <li className="header-menu-item">
+                        <Link className="header-menu-link" href="/residential-projects" onClick={() => setMenuOpen(false)}>Residential</Link>
+                    </li>
+                    <li className="header-menu-item">
+                        <Link className="header-menu-link" href="/commercial-projects" onClick={() => setMenuOpen(false)}>Commercial</Link>
+                    </li>
+                    <li className="header-menu-item">
+                        <Link className="header-menu-link" href="/land-development" onClick={() => setMenuOpen(false)}>Land Development</Link>
+                    </li>
+                    <li className="header-menu-item">
+                        <Link className="header-menu-link" href="/upcoming-projects" onClick={() => setMenuOpen(false)}>Upcoming Projects</Link>
                     </li>
                     <li className="header-menu-item">
                         <Link className="header-menu-link" href="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
