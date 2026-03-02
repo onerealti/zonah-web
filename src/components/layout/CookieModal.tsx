@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function CookieModal() {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const consent = localStorage.getItem('cookie-consent');
-        if (!consent) {
-            setIsVisible(true);
+    const [isVisible, setIsVisible] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const consent = localStorage.getItem('cookie-consent');
+            return !consent;
         }
-    }, []);
+        return false;
+    });
 
     const handleAccept = () => {
         localStorage.setItem('cookie-consent', 'accepted');

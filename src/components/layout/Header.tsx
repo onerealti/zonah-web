@@ -58,9 +58,7 @@ export default function Header() {
                             <div className="column col-header col-middle">
                                 <ul className="theme-menu is-hidden-mobile">
                                     <li><Link href="/about-us">About</Link></li>
-                                    <li><Link href="/residential-projects">Residential</Link></li>
-                                    <li><Link href="/commercial-projects">Commercial</Link></li>
-                                    <li><Link href="/land-development">Land Development</Link></li>
+                                    <li><Link href="/projects">Projects</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -121,13 +119,7 @@ export default function Header() {
                         <Link className="header-menu-link" href="/about-us" onClick={() => setMenuOpen(false)}>About</Link>
                     </li>
                     <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/residential-projects" onClick={() => setMenuOpen(false)}>Residential</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/commercial-projects" onClick={() => setMenuOpen(false)}>Commercial</Link>
-                    </li>
-                    <li className="header-menu-item">
-                        <Link className="header-menu-link" href="/land-development" onClick={() => setMenuOpen(false)}>Land Development</Link>
+                        <Link className="header-menu-link" href="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
                     </li>
                     <li className="header-menu-item">
                         <Link className="header-menu-link" href="/upcoming-projects" onClick={() => setMenuOpen(false)}>Upcoming Projects</Link>

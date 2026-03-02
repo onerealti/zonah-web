@@ -20,7 +20,7 @@ const Footer = () => {
                                         <span>
                                             <b className="has-text-weight-semibold">Corporate Address: </b>
                                             <a href="https://www.google.com/maps/search/Zonah+s+Crescent+Road+No.12+Banjara+Hills+Hyderabad" target="_blank" rel="nofollow">
-                                                8-2-682/2/E, 5th Floor zonah's Crescent,<br /> Road No.12, Banjara Hills,<br /> Hyderabad, Telangana, India
+                                                8-2-682/2/E, 5th Floor zonah&apos;s Crescent,<br /> Road No.12, Banjara Hills,<br /> Hyderabad, Telangana, India
                                             </a>
                                         </span>
                                     </li>
@@ -57,9 +57,7 @@ const Footer = () => {
                                 <h4>Quick Menu</h4>
                                 <ul>
                                     <li><Link href="/about-us">About Us</Link></li>
-                                    <li><Link href="/residential-projects">Residential</Link></li>
-                                    <li><Link href="/commercial-projects">Commercial</Link></li>
-                                    <li><Link href="/land-development">Land Development</Link></li>
+                                    <li><Link href="/projects">Projects</Link></li>
                                 </ul>
                             </div>
                         </div>

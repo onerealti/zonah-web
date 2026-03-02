@@ -8,9 +8,9 @@ const PropertySearchBox = () => {
                     <div className="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen real-estate-properties-col">
                         <div className="section-title">
                             <h2>
-                                Find the most<br />
-                                <span>reliable</span> &amp; <span>appreciating</span><br />
-                                Real Estate&nbsp;Properties
+                                Discover Premium<br />
+                                <span>Development</span> &amp; <span>Investment</span><br />
+                                Opportunities
                             </h2>
                         </div>
                     </div>

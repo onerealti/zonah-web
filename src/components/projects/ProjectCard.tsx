@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     return (
         <div className="column is-12-mobile is-6-tablet is-6-desktop is-4-widescreen projects-col" data-city={city.toLowerCase()}>
             <div className="project-vertical-block">
-                <a href={`/residential-projects/${slug}`} className="block-link" data-cursor="Know<br>More"></a>
+                <a href={`/projects/${slug}`} className="block-link" data-cursor="Know<br>More"></a>
                 {badgeStatus && (
                     <div className={`project-status ${badgeStatus.toLowerCase().replace(/\s+/g, '-')}`}>
                         <span>{badgeStatus}</span>
@@ -137,7 +137,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                             </a>
                         </li>
                         <li className="project-contact-item">
-                            <a className="theme-btn line-btn" href={`/residential-projects/${slug}`}>
+                            <a className="theme-btn line-btn" href={`/projects/${slug}`}>
                                 Know More
                             </a>
                         </li>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSlider from "@/components/home/HeroSlider";
 import HomeSearch from "@/components/home/HomeSearch";
 import AboutUs from "@/components/home/AboutUs";

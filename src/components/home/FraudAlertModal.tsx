@@ -1,17 +1,16 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 const FraudAlertModal = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    useEffect(() => {
-        // Check if cookie exists to hide modal
-        const isHidden = localStorage.getItem('fraud-alert-hidden');
-        if (!isHidden) {
-            setIsOpen(true);
+    const [isOpen, setIsOpen] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const isHidden = localStorage.getItem('fraud-alert-hidden');
+            return !isHidden;
         }
-    }, []);
+        return false;
+    });
 
     const closeModal = () => {
         setIsOpen(false);
@@ -33,7 +32,7 @@ const FraudAlertModal = () => {
                 <div className="theme-modal-card-body">
                     <p>It has come to our attention that fraudsters are misusing the name of Zonah Developers to promote fake investment schemes, falsely promising high returns in properties. We urge everyone to be cautious and avoid falling prey to such scams.</p>
                     <p>Please note that we have already reported these fraudulent activities to the authorities and are taking steps to address the situation.</p>
-                    <p>For authentic information about our projects, always visit our official website: <b><a href="/">www.zonahdevelopers.com</a></b></p>
+                    <p>For authentic information about our projects, always visit our official website: <b><Link href="/">www.zonahdevelopers.com</Link></b></p>
                     <p>Stay vigilant, and thank you for your continued trust.</p>
                     <div className="has-text-right d-block">
                         <a className="btn-pop-up full-width theme-btn" href="javascript:void(0);" onClick={closeModal}>Ok</a>

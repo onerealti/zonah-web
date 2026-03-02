@@ -76,14 +76,14 @@ export default function SearchResults() {
 
           <div class="column is-12-mobile is-6-tablet is-4-desktop projects-col">
             <div class="project-vertical-block">
-              <a href="/residential-projects/serene-heights" class="projects-img-link">
+              <a href="/projects/serene-heights" class="projects-img-link">
                 <div class="img-fixed-ratio projects-img" style="background:linear-gradient(135deg,#1a1a2e,#0f3460);display:flex;align-items:center;justify-content:center;min-height:200px;">
                   <span style="color:rgba(255,255,255,0.25);font-size:36px;font-weight:300;">ZD</span>
                   <span style="position:absolute;top:10px;left:10px;background:#c8a96e;color:#fff;padding:3px 8px;font-size:10px;font-weight:600;border-radius:2px;text-transform:uppercase;">Under Construction</span>
                 </div>
               </a>
               <div class="project-title-and-price mt-3">
-                <div class="project-title"><a href="/residential-projects/serene-heights"><h3>Zonah Serene Heights</h3></a></div>
+                <div class="project-title"><a href="/projects/serene-heights"><h3>Zonah Serene Heights</h3></a></div>
                 <div class="project-desc-price">
                   <span class="project-location">Whitefield, Bangalore</span>
                   <span class="project-price">₹1.2 Cr+</span>
@@ -94,14 +94,14 @@ export default function SearchResults() {
 
           <div class="column is-12-mobile is-6-tablet is-4-desktop projects-col">
             <div class="project-vertical-block">
-              <a href="/residential-projects/haven-gardens" class="projects-img-link">
+              <a href="/projects/haven-gardens" class="projects-img-link">
                 <div class="img-fixed-ratio projects-img" style="background:linear-gradient(135deg,#1b2838,#1a3a0a);display:flex;align-items:center;justify-content:center;min-height:200px;">
                   <span style="color:rgba(255,255,255,0.25);font-size:36px;font-weight:300;">ZD</span>
                   <span style="position:absolute;top:10px;left:10px;background:#2ecc71;color:#fff;padding:3px 8px;font-size:10px;font-weight:600;border-radius:2px;text-transform:uppercase;">Ready to Move</span>
                 </div>
               </a>
               <div class="project-title-and-price mt-3">
-                <div class="project-title"><a href="/residential-projects/haven-gardens"><h3>Zonah Haven Gardens</h3></a></div>
+                <div class="project-title"><a href="/projects/haven-gardens"><h3>Zonah Haven Gardens</h3></a></div>
                 <div class="project-desc-price">
                   <span class="project-location">Gachibowli, Hyderabad</span>
                   <span class="project-price">₹98 L+</span>
@@ -112,14 +112,14 @@ export default function SearchResults() {
 
           <div class="column is-12-mobile is-6-tablet is-4-desktop projects-col">
             <div class="project-vertical-block">
-              <a href="/residential-projects/marina-crest" class="projects-img-link">
+              <a href="/projects/marina-crest" class="projects-img-link">
                 <div class="img-fixed-ratio projects-img" style="background:linear-gradient(135deg,#0d2137,#0a4373);display:flex;align-items:center;justify-content:center;min-height:200px;">
                   <span style="color:rgba(255,255,255,0.25);font-size:36px;font-weight:300;">ZD</span>
                   <span style="position:absolute;top:10px;left:10px;background:#c8a96e;color:#fff;padding:3px 8px;font-size:10px;font-weight:600;border-radius:2px;text-transform:uppercase;">Under Construction</span>
                 </div>
               </a>
               <div class="project-title-and-price mt-3">
-                <div class="project-title"><a href="/residential-projects/marina-crest"><h3>Zonah Marina Crest</h3></a></div>
+                <div class="project-title"><a href="/projects/marina-crest"><h3>Zonah Marina Crest</h3></a></div>
                 <div class="project-desc-price">
                   <span class="project-location">OMR, Chennai</span>
                   <span class="project-price">₹1.05 Cr+</span>
@@ -130,14 +130,14 @@ export default function SearchResults() {
 
           <div class="column is-12-mobile is-6-tablet is-4-desktop projects-col">
             <div class="project-vertical-block">
-              <a href="/residential-projects/skyline-residences" class="projects-img-link">
+              <a href="/projects/skyline-residences" class="projects-img-link">
                 <div class="img-fixed-ratio projects-img" style="background:linear-gradient(135deg,#131822,#1e3a5f);display:flex;align-items:center;justify-content:center;min-height:200px;">
                   <span style="color:rgba(255,255,255,0.25);font-size:36px;font-weight:300;">ZD</span>
                   <span style="position:absolute;top:10px;left:10px;background:#c8a96e;color:#fff;padding:3px 8px;font-size:10px;font-weight:600;border-radius:2px;text-transform:uppercase;">Under Construction</span>
                 </div>
               </a>
               <div class="project-title-and-price mt-3">
-                <div class="project-title"><a href="/residential-projects/skyline-residences"><h3>Zonah Skyline Residences</h3></a></div>
+                <div class="project-title"><a href="/projects/skyline-residences"><h3>Zonah Skyline Residences</h3></a></div>
                 <div class="project-desc-price">
                   <span class="project-location">Thane, Mumbai</span>
                   <span class="project-price">₹1.85 Cr+</span>
@@ -148,14 +148,14 @@ export default function SearchResults() {
 
           <div class="column is-12-mobile is-6-tablet is-4-desktop projects-col">
             <div class="project-vertical-block">
-              <a href="/residential-projects/emerald-bay" class="projects-img-link">
+              <a href="/projects/emerald-bay" class="projects-img-link">
                 <div class="img-fixed-ratio projects-img" style="background:linear-gradient(135deg,#0a1f10,#1a5c37);display:flex;align-items:center;justify-content:center;min-height:200px;">
                   <span style="color:rgba(255,255,255,0.25);font-size:36px;font-weight:300;">ZD</span>
                   <span style="position:absolute;top:10px;left:10px;background:#2ecc71;color:#fff;padding:3px 8px;font-size:10px;font-weight:600;border-radius:2px;text-transform:uppercase;">Ready to Move</span>
                 </div>
               </a>
               <div class="project-title-and-price mt-3">
-                <div class="project-title"><a href="/residential-projects/emerald-bay"><h3>Zonah Emerald Bay</h3></a></div>
+                <div class="project-title"><a href="/projects/emerald-bay"><h3>Zonah Emerald Bay</h3></a></div>
                 <div class="project-desc-price">
                   <span class="project-location">Marine Drive, Kochi</span>
                   <span class="project-price">₹78 L+</span>
@@ -166,14 +166,14 @@ export default function SearchResults() {
 
           <div class="column is-12-mobile is-6-tablet is-4-desktop projects-col">
             <div class="project-vertical-block">
-              <a href="/residential-projects/seabreeze-villas" class="projects-img-link">
+              <a href="/projects/seabreeze-villas" class="projects-img-link">
                 <div class="img-fixed-ratio projects-img" style="background:linear-gradient(135deg,#0a1a0a,#2a5c0a);display:flex;align-items:center;justify-content:center;min-height:200px;">
                   <span style="color:rgba(255,255,255,0.25);font-size:36px;font-weight:300;">ZD</span>
                   <span style="position:absolute;top:10px;left:10px;background:#c8a96e;color:#fff;padding:3px 8px;font-size:10px;font-weight:600;border-radius:2px;text-transform:uppercase;">Under Construction</span>
                 </div>
               </a>
               <div class="project-title-and-price mt-3">
-                <div class="project-title"><a href="/residential-projects/seabreeze-villas"><h3>Zonah Seabreeze Villas</h3></a></div>
+                <div class="project-title"><a href="/projects/seabreeze-villas"><h3>Zonah Seabreeze Villas</h3></a></div>
                 <div class="project-desc-price">
                   <span class="project-location">Candolim, Goa</span>
                   <span class="project-price">₹2.4 Cr+</span>

@@ -1,0 +1,113 @@
+
+> zonah-developers@0.1.0 lint
+> eslint
+
+
+C:\Users\User\Desktop\pd\zonah-developers\extract_saved.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\User\Desktop\pd\zonah-developers\fix_links.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\User\Desktop\pd\zonah-developers\get_links.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\User\Desktop\pd\zonah-developers\parse_jsx.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\User\Desktop\pd\zonah-developers\parse_next.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\User\Desktop\pd\zonah-developers\public\d1t2fddy6amcvs.cloudfront.net\js\pgchat.js
+   5:3  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  24:3  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  49:7  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  54:7  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  61:7  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\User\Desktop\pd\zonah-developers\public\resources\media\js\accordian.min.js
+  2:14   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:119  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  2:532  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\User\Desktop\pd\zonah-developers\scrape_live_links.js
+  1:19  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\User\Desktop\pd\zonah-developers\src\app\about-us\page.tsx
+  71:280  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  71:524  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\User\Desktop\pd\zonah-developers\src\app\page.tsx
+  1:8  warning  'Image' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\home\BoardOfDirectors.tsx
+  5:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\home\FeaturedProjects.tsx
+    5:1   error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free                                                             @typescript-eslint/ban-ts-comment
+   85:45  error  Do not use an `<a>` element to navigate to `/projects/zonah-city/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages       @next/next/no-html-link-for-pages
+  200:61  error  Do not use an `<a>` element to navigate to `/projects/zonah-city/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages       @next/next/no-html-link-for-pages
+  208:61  error  Do not use an `<a>` element to navigate to `/projects/zonah-city/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages       @next/next/no-html-link-for-pages
+  218:49  error  Do not use an `<a>` element to navigate to `/projects/zonah-city/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages       @next/next/no-html-link-for-pages
+  233:45  error  Do not use an `<a>` element to navigate to `/projects/zonah-golfshire/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+  348:61  error  Do not use an `<a>` element to navigate to `/projects/zonah-golfshire/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+  356:61  error  Do not use an `<a>` element to navigate to `/projects/zonah-golfshire/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+  366:49  error  Do not use an `<a>` element to navigate to `/projects/zonah-golfshire/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\home\FraudAlertModal.tsx
+  12:13   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\home\FraudAlertModal.tsx:12:13
+  10 |         const isHidden = localStorage.getItem('fraud-alert-hidden');
+  11 |         if (!isHidden) {
+> 12 |             setIsOpen(true);
+     |             ^^^^^^^^^ Avoid calling setState() directly within an effect
+  13 |         }
+  14 |     }, []);
+  15 |  react-hooks/set-state-in-effect
+  36:108  error  Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @next/next/no-html-link-for-pages
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\home\HeroSlider.tsx
+  5:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\home\RecentViewedProjects.tsx
+   5:1   error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free                                                             @typescript-eslint/ban-ts-comment
+  49:45  error  Do not use an `<a>` element to navigate to `/projects/zonah-city/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages       @next/next/no-html-link-for-pages
+  58:45  error  Do not use an `<a>` element to navigate to `/projects/zonah-city/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages       @next/next/no-html-link-for-pages
+  70:45  error  Do not use an `<a>` element to navigate to `/projects/zonah-golfshire/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+  79:45  error  Do not use an `<a>` element to navigate to `/projects/zonah-golfshire/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\layout\CookieModal.tsx
+  11:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\User\Desktop\pd\zonah-developers\src\components\layout\CookieModal.tsx:11:13
+   9 |         const consent = localStorage.getItem('cookie-consent');
+  10 |         if (!consent) {
+> 11 |             setIsVisible(true);
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  12 |         }
+  13 |     }, []);
+  14 |  react-hooks/set-state-in-effect
+
+C:\Users\User\Desktop\pd\zonah-developers\src\sanity\lib\image.ts
+  7:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\User\Desktop\pd\zonah-developers\types.d.ts
+  2:29  warning  'ReactNode' is defined but never used     @typescript-eslint/no-unused-vars
+  3:40  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  4:45  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 40 problems (30 errors, 10 warnings)
+

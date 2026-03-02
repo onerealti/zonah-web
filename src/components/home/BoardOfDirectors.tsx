@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-// @ts-ignore
+// @ts-expect-error - SplideTrack type not fully exported
 import { SplideTrack } from '@splidejs/react-splide';
 import ScrollReveal from '../animations/ScrollReveal';
 

@@ -1,55 +1,31 @@
 'use client';
 
-import React, { useState } from 'react';
-
-type SegmentTab = 'residential' | 'commercial';
-
-type LocationItem = {
-    location: string;
-    count: number;
-    href: string;
-};
+import React, { useState, useEffect } from 'react';
+import { getListingProjects, projectSegments, type ListingProject } from '@/data/projects';
 
 import ScrollReveal from '../animations/ScrollReveal';
 
-const segmentData: Record<SegmentTab, LocationItem[]> = {
-    residential: [
-        { location: 'Bengaluru', count: 86, href: '/residential-projects?city=bengaluru' },
-        { location: 'Hyderabad', count: 14, href: '/residential-projects?city=hyderabad' },
-        { location: 'Chennai', count: 10, href: '/residential-projects?city=chennai' },
-        { location: 'Mumbai', count: 8, href: '/residential-projects?city=mumbai' },
-        { location: 'Kochi', count: 6, href: '/residential-projects?city=kochi' },
-        { location: 'Mangalore', count: 4, href: '/residential-projects?city=mangalore' },
-    ],
-    commercial: [
-        { location: 'Bengaluru', count: 35, href: '/commercial-projects?city=bengaluru' },
-        { location: 'Hyderabad', count: 8, href: '/commercial-projects?city=hyderabad' },
-        { location: 'Chennai', count: 6, href: '/commercial-projects?city=chennai' },
-        { location: 'Mumbai', count: 5, href: '/commercial-projects?city=mumbai' },
-    ],
-};
-
-const tabs: { key: SegmentTab; label: string }[] = [
-    { key: 'residential', label: 'Residential' },
-    { key: 'commercial', label: 'Commercial' },
-];
-
 const OurProjects = () => {
-    const [activeTab, setActiveTab] = useState<SegmentTab>('residential');
-    const [activeLocation, setActiveLocation] = useState<string>('Bengaluru');
+    const [projects, setProjects] = useState<ListingProject[]>([]);
 
-    const handleTabChange = (tabKey: SegmentTab) => {
-        setActiveTab(tabKey);
-        if (segmentData[tabKey].length > 0) {
-            setActiveLocation(segmentData[tabKey][0].location);
-        }
-    };
+    useEffect(() => {
+        getListingProjects().then((data) => {
+            setProjects(data);
+        });
+    }, []);
+
+    const segmentCards = projectSegments.map((segment) => ({
+        key: segment.id,
+        label: segment.name,
+        count: projects.filter((project) => project.segment === segment.id).length,
+        href: `/projects?segment=${segment.id}`,
+    }));
 
     return (
         <section className="section section-our-projects light-gray-bg">
             <div className="container our-projects-wrapper">
                 <div className="columns is-multiline is-vcentered our-projects-cols gap-1">
-                    {/* Left column: tabs + project location counts */}
+                    {/* Left column: segment cards */}
                     <div className="column is-12-mobile is-12-tablet is-7-desktop is-7-widescreen our-projects-col">
                         <div className="our-projects-detail">
                             <ScrollReveal direction="up" distance={30} className="section-title">
@@ -58,59 +34,25 @@ const OurProjects = () => {
                             </ScrollReveal>
 
                             <ScrollReveal direction="up" distance={30} delay={0.1} className="our-projects-tab-detail section3">
-                                <ul className="tabs-detail">
-                                    {tabs.map((tab) => (
-                                        <li
-                                            key={tab.key}
-                                            className={`tab${activeTab === tab.key ? ' is-active' : ''}`}
-                                            onClick={() => handleTabChange(tab.key)}
-                                        >
-                                            <a>{tab.label}</a>
-                                        </li>
-                                    ))}
-                                </ul>
-
                                 <div className="our-projects-tab-desc-detail">
-                                    {tabs.map((tab) => (
-                                        <div
-                                            key={tab.key}
-                                            className={`content-tab ${tab.key === 'residential' ? 'residential_count_bind' : ''} ${tab.key === 'commercial' ? 'commercial_count_bind' : ''}`}
-                                            id={`projects-${tab.key}`}
-                                            style={{ display: activeTab === tab.key ? 'block' : 'none' }}
-                                        >
-                                            <ul className="projects-location-detail">
-                                                {segmentData[tab.key].map((item, idx) => {
-                                                    const viewAllLink = (
-                                                        <a className="projects-location-view-all view_projects call_project" data-type={tab.label} data-citycode={item.location.toLowerCase()} href={item.href}>
-                                                            View All
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-up-right" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.25" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path d="M17 7l-10 10"></path>
-                                                                <path d="M8 7l9 0l0 9"></path>
-                                                            </svg>
-                                                        </a>
-                                                    );
-
-                                                    const isActive = activeTab === tab.key && activeLocation === item.location;
-
-                                                    return (
-                                                        <li key={idx}>
-                                                            <div
-                                                                className={`projects-location-items-index cursor-pointer click_projects${isActive ? ' active' : ''}`}
-                                                                data-type={tab.label}
-                                                                data-citycode={item.location.toLowerCase()}
-                                                                onClick={() => setActiveLocation(item.location)}
-                                                            >
-                                                                <h4>{item.location}</h4>
-                                                                <span>{item.count} Projects Available</span>
-                                                                {viewAllLink}
-                                                            </div>
-                                                        </li>
-                                                    );
-                                                })}
-                                            </ul>
-                                        </div>
-                                    ))}
+                                    <ul className="projects-location-detail">
+                                        {segmentCards.map((card) => (
+                                            <li key={card.key}>
+                                                <div className="projects-location-items-index cursor-pointer click_projects">
+                                                    <h4>{card.label}</h4>
+                                                    <span>{card.count} Projects Available</span>
+                                                    <a className="projects-location-view-all view_projects call_project" data-type={card.label} href={card.href}>
+                                                        View All
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-up-right" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.25" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M17 7l-10 10"></path>
+                                                            <path d="M8 7l9 0l0 9"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </ScrollReveal>
                         </div>
@@ -121,7 +63,7 @@ const OurProjects = () => {
                         <div className="theme-block card p-1">
                             <div id="map" style={{ height: '420px', borderRadius: '4px', overflow: 'hidden' }}>
                                 <iframe
-                                    src={`https://maps.google.com/maps?q=${encodeURIComponent(activeLocation + ', India')}&t=&z=10&ie=UTF8&iwloc=&output=embed`}
+                                    src={`https://maps.google.com/maps?q=${encodeURIComponent('India')}&t=&z=5&ie=UTF8&iwloc=&output=embed`}
                                     width="100%"
                                     height="420"
                                     style={{ border: 0 }}

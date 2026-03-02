@@ -1,8 +1,9 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-// @ts-ignore
+// @ts-expect-error - SplideTrack type not fully exported
 import { SplideTrack } from '@splidejs/react-splide';
 
 import ScrollReveal from '../animations/ScrollReveal';
@@ -46,7 +47,7 @@ const RecentViewedProjects = () => {
                                             <picture>
                                                 <img src="https://placehold.co/470x260/222222/FFF?text=Recent+1" alt="Recent 1" className="img-fixed-ratio" width="470" height="260" />
                                             </picture>
-                                            <a href="/projects/zonah-city" className="block-link" data-cursor="Know<br>More"></a>
+                                            <Link href="/projects/zonah-city" className="block-link" data-cursor="Know<br>More"></Link>
                                         </div>
                                         <div className="project-title-and-price mt-4">
                                             <div className="project-title">
@@ -55,7 +56,7 @@ const RecentViewedProjects = () => {
                                             <div className="project-desc-price">
                                                 <span>Sarjapur Road, Bangalore</span>
                                             </div>
-                                            <a href="/projects/zonah-city" className="block-link" data-cursor="Know<br>More"></a>
+                                            <Link href="/projects/zonah-city" className="block-link" data-cursor="Know<br>More"></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +68,7 @@ const RecentViewedProjects = () => {
                                             <picture>
                                                 <img src="https://placehold.co/470x260/333333/FFF?text=Recent+2" alt="Recent 2" className="img-fixed-ratio" width="470" height="260" />
                                             </picture>
-                                            <a href="/projects/zonah-golfshire" className="block-link" data-cursor="Know<br>More"></a>
+                                            <Link href="/projects/zonah-golfshire" className="block-link" data-cursor="Know<br>More"></Link>
                                         </div>
                                         <div className="project-title-and-price mt-4">
                                             <div className="project-title">
@@ -76,7 +77,7 @@ const RecentViewedProjects = () => {
                                             <div className="project-desc-price">
                                                 <span>Nandi Hills, Bangalore</span>
                                             </div>
-                                            <a href="/projects/zonah-golfshire" className="block-link" data-cursor="Know<br>More"></a>
+                                            <Link href="/projects/zonah-golfshire" className="block-link" data-cursor="Know<br>More"></Link>
                                         </div>
                                     </div>
                                 </div>

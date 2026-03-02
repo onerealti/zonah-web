@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
@@ -85,9 +86,9 @@ const HomeSearch = () => {
                     <div className="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen real-estate-properties-col">
                         <div className="section-title">
                             <h2>
-                                Find the most<br />
-                                <span>reliable</span> &amp; <span>appreciating</span><br />
-                                Real Estate&nbsp;Properties
+                                Discover Premium<br />
+                                <span>Development</span> &amp; <span>Investment</span><br />
+                                Opportunities
                             </h2>
                         </div>
                     </div>
@@ -233,14 +234,14 @@ const HomeSearch = () => {
                                                 {/* Search button */}
                                                 <div className="column is-12-mobile is-6-tablet is-4-desktop is-4-widescreen searchbind">
                                                     <div className="col-form">
-                                                        <a className="theme-btn line-btn black-btn full-width rounded-pill btn-with-arrow searchbinds" href="/residential-projects">
+                                                        <Link className="theme-btn line-btn black-btn full-width rounded-pill btn-with-arrow searchbinds" href="/projects">
                                                             <span className="appendsearchcount">128</span> Projects Found&nbsp;
                                                             <svg fill="none" height="24" viewBox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M2 12H22" stroke="#303030" strokeLinecap="round" strokeLinejoin="round"></path>
                                                                 <path d="M19 16L23 12" stroke="#303030" strokeLinecap="round" strokeLinejoin="round"></path>
                                                                 <path d="M19 8L23 12" stroke="#303030" strokeLinecap="round" strokeLinejoin="round"></path>
                                                             </svg>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
 

@@ -60,6 +60,19 @@
     color: #222;
 }
 
+@media screen and (max-width: 767px) {
+    .theme-sidebar-footer.sidebar-filter-btn .submit-btn {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .theme-sidebar-footer.sidebar-filter-btn .submit-btn .theme-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
 /* Project price and contact row */
 .project-price-and-contact ul {
     display: flex;
